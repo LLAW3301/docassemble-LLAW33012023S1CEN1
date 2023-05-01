@@ -1,0 +1,243 @@
+---
+# This is our welcome screen
+mandatory: True
+question: Welcome to Co-Parent Connect by Centacare
+subquestion: |
+ *This app does not provide legal advice. If you need legal advice, please speak to a lawyer.*
+ 
+  This app provides a platform to answer your legal questions and help facilitate easy communcaition with co-parents. 
+  
+  If you are involved in a seperation or divorce, press **Continue**
+  
+  If you are happily married, press **Exit**
+   
+   - This will take you to the Centacare website as this app will not be beneficial for your situation 
+buttons: 
+  - Continue: continue 
+  - Exit: exit
+    url: https://centacare.org.au/
+---
+# Second screen where the user can select their situation
+mandatory: true
+question: Co-Parent Connect
+subquestion: |
+  Does your matter involve a child or financial issue?
+fields:
+  - no label: Cen_option
+    datatype: radio
+    choices:
+      - Child matter: ChildScreen
+      - Financial issue: FinancialScreen
+---
+mandatory: true
+question: Co-Parent Connect
+subquestion: |
+  Do you have custody?
+fields:
+   - no label: Cus_option
+     datatype: radio
+     choices:
+        - Yes: continue
+        - No: ContactScreen
+---
+mandatory: true
+code: |
+  if Cus_option == 'ContactScreen':
+    Contact_Screen
+---
+mandatory: true
+question: Co-Parent Connect
+subquestion: |
+  Is there an agreement in place?
+fields:
+   - no label: Ag_option
+     datatype: radio
+     choices:
+        - Yes: Continue
+        - No: ContactScreen
+---
+mandatory: true
+code: |
+  if Ag_option == 'ContactScreen':
+    Contact_Screen
+---
+mandatory: true
+question: Co-Parent Connect
+subquestion: |
+  Do you have a question about a parenting agreement?
+fields:
+   - no label: Qu_option
+     datatype: radio
+     choices:
+        - Yes: continue
+        - No: GlossaryScreen
+---
+mandatory: true
+code: |
+  if Qu_option == 'GlossaryScreen':
+    Glossary_Screen
+---
+mandatory: true
+question: Co-Parent Connect
+subquestion: | 
+  Please select from the following
+fields:
+  - no label: Pa_option
+    datatype: radio
+    choices:
+      - Important event/occasion: OccScreen
+      - Rights regarding custody: RightsScreen
+      - Unhappy with order: OrderScreen
+      - Co-parent breaking order: BreakScreen
+      - Need a copy of parenting order: CopyScreen
+      - Children want to decide: DecScreen
+---
+mandatory: true
+code: |
+  if Pa_option == 'OccScreen':
+    Occ_Screen
+  if Pa_option == 'RightsScreen':
+    Rights_Screen
+  if Pa_option == 'OrderScreen':
+    Order_Screen
+  if Pa_option == 'BreakScreen':
+    Break_Screen
+  if Pa_option == 'CopyScreen':
+    Copy_Screen
+  if Pa_option == 'DecScreen':
+    Dec_Screen
+---
+# This is the financial screen
+event: Financial_Screen
+question: Co-Parent Connect
+subquestion: | 
+  Please select the option that is suited to your situation?
+---
+# This is the Occasion screen
+event: Occ_Screen
+question: Can I change our parenting plan if I need the kids for an important event/occasion? 
+subquestion: | 
+       Yes; the first  step, if it is safe to do so and you are comfortable, is to contact the other party/ies to your parenting plan, to see if they will agree to your suggested changes. You may also communicate through your lawyers if appropriate. As a parenting plan is not court ordered, any changes in parenting plans simply need to be agreed by parties to the plan.
+buttons: 
+  - Restart: restart
+  - Exit: exit
+    url: https://centacare.org.au/
+---
+# This is the Rights screen
+event: Rights_Screen
+question: Where can I find my rights as a parent sharing custody? 
+subquestion: | 
+       The Family Law Act 1975 is the authority on rights involving parenting disputes and resolutions. The Federal Circuit and Family Court of Australia has an informative website. For detailed advice specific to your situation, speak to your lawyer.
+buttons: 
+  - Restart: restart
+  - Exit: exit
+    url: https://centacare.org.au/
+---
+# This is the Order screen
+event: Order_Screen
+question: Where do I go if I am unhappy with the parenting order?
+subquestion: | 
+         Speak to your lawyers. As a parenting order is a Court order, you will need to show that there has been a significant change of circumstances that makes a change necessary.
+         
+         If you and the other party to the order do agree with any changes to be made, you can sign draft consent orders, which the Court can make into orders, without the need for the parties to appear in Court.
+         
+           If you and the other party to the order do not agree, you need to go through the same process as though you were applying for the parenting order the first time. See how to apply for parenting orders here.
+buttons: 
+  - Restart: restart
+  - Exit: exit
+    url: https://centacare.org.au/
+---
+# This is the Breaking Order screen
+event: Break_Screen
+question: Who do I speak to if my co-parent is breaking the parenting order?
+subquestion: | 
+  Seek legal advice. If one parent is contravening a parenting order, the other parent may file an application to ask the Court to enforce the order.
+  
+  Consider the result you want to achieve;
+  
+  If you are seeking that the other parent receive punishment or consequence for breach of the order, complete the Application - Contravention form. (link)
+  
+  If you do not want the other parent punished, but rather want the resumption of the arrangements as set out in your order, complete the Application - Enforcement form. (link)
+buttons: 
+  - Restart: restart
+  - Exit: exit
+    url: https://centacare.org.au/
+---
+# This is the Copy screen
+event: Copy_Screen
+question: Where can I find a copy of our parenting order?
+subquestion: | 
+         Court orders (except appeals) are signed and sealed electronically and available to download from the Commonwealth Courts Portal (the Portal).(link)
+         
+         Find more details on how to register for the Portal and how to access your documents at https://www.fcfcoa.gov.au/hdi/access-my-orders 
+buttons: 
+  - Restart: restart
+  - Exit: exit
+    url: https://centacare.org.au/
+---
+# This is the Children Decision screen
+event: Dec_Screen
+question: Can our child(ren) have a say in where they stay?
+subquestion: | 
+    Children do not have a definitive say in where, or with which parent they stay with. 
+    A child’s wishes is one of the many factors that the Court has to consider when determining what decisions are in the child’s best interests. The older and more mature the child is, the less likely it is that the Court will make decisions in opposition to their wishes. 
+    Although there is no set-age at which a child can make their choice as to where they stay, they usually reach a point in their mid-teens where they can physically place themselves where they prefer.
+buttons: 
+  - Restart: restart
+  - Exit: exit
+    url: https://centacare.org.au/
+---
+# This is the glossary screen
+event: Glossary_Screen
+question: Co-Parent Connect
+subquestion: |
+  Do you need help understanding a legal term?
+buttons: 
+  - Yes: continue 
+  - Restart: restart
+---
+mandatory: true
+question: Co-Parent Connect
+subquestion: | 
+  Glossary terms
+fields:
+  - no label: Gt_option
+    datatype: radio
+    choices:
+      - Parenting Order: PoScreen
+---
+mandatory: true
+code: |
+  if Gt_option == 'PoScreen':
+    Po_Screen
+---
+# This is the Po screen
+event: Po_Screen
+question: Parenting Order
+subquestion: | 
+       A parenting order is a legally enforceable order issued by a court under the Family Law Act 1975. It establishes the arrangements for the care, development, and welfare of a child. It contains agreements on matters such as who the child is to live with, how much time the child will spend with each parent, how the parents will communicate on matters regarding the child, the allocation of parental responsibilities, how disputes are to be resolved, and any other matters relevant to the care, development, and welfare of a child.
+buttons: 
+  - Restart: restart
+  - Exit: exit
+    url: https://centacare.org.au/
+---
+# This is the contact Centacare screen
+event: Contact_Screen
+question: It seems like you need further assistance, you can contact Centacare using the details below. 
+subquestion: |
+
+  
+  Alternatively select exit to be taken to the website.
+  
+  Thank you for using our application.
+  
+  Address: 45 Wakefield Street Adelaide SA 5000
+  
+  Phone:  08 8215 6700
+  
+  Email: enquiries@centacare.org.au
+buttons: 
+  - Restart: restart
+  - Exit: exit
+    url: https://centacare.org.au/
+---
