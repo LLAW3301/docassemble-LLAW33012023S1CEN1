@@ -5,7 +5,17 @@ question: Welcome to Co-Parent Connect by Centacare
 subquestion: |
  *This app does not provide legal advice. If you need legal advice, please speak to a lawyer.*
  
-  This app provides a platform to answer your legal questions and help facilitate easy communcaition with co-parents. 
+  This app provides a platform to answer your legal questions and help facilitate easy communcaition with co-parents.
+buttons: 
+  - Continue: continue 
+  - Exit: exit
+    url: https://centacare.org.au/
+---
+# Second screen where the user can select their situation
+mandatory: true
+question: Co-Parent Connect
+subquestion: |
+  Are you involved in a relationship seperation?
   
   If you are involved in a seperation or divorce, press **Continue**
   
@@ -17,7 +27,7 @@ buttons:
   - Exit: exit
     url: https://centacare.org.au/
 ---
-# Second screen where the user can select their situation
+# Third screen where the user can select what they need help with
 mandatory: true
 question: Co-Parent Connect
 subquestion: |
