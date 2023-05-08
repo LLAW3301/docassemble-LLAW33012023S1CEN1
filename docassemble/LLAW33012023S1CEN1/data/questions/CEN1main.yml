@@ -1,0 +1,101 @@
+---
+# This is our welcome screen
+mandatory: True
+question: Welcome to Co-Parent Connect by Centacare
+subquestion: |
+ *This app does not provide legal advice. If you need legal advice, please speak to a lawyer.*
+ 
+  This app provides a platform to answer your legal questions and help facilitate easy communication with co-parents. 
+buttons: 
+  - Continue: continue 
+  - Exit: exit
+    url: https://centacare.org.au/
+---
+# Creating a new mandatory block here which links users to FAQs.
+mandatory: True
+code: |
+  if already_separated or currently_separating:
+    children_fin
+    Ag_option
+  else:
+    if other_option == 'legal term':
+      Legal_Terms_screen
+    else:
+      contact_screen
+---
+question: |
+  Please provide the following information
+fields:
+  - "Are you separated or divorced already?": already_separated
+    datatype: yesnoradio
+---
+question: |
+  Please provide the following information
+fields:
+  - "Are you currently separating or divorcing?": currently_separating
+    datatype: yesnoradio
+---
+question: Co-Parent Connect
+subquestion: |
+  Does your matter relate to children or financial matters?
+field: children_fin
+choices:
+  - Children
+  - Financial
+---
+question: Co-Parent Connect
+subquestion: |
+  Is there an agreement in place?
+fields:
+   - no label: Ag_option
+     datatype: radio
+     choices:
+        - Yes: Continue
+        - No: ContactScreen
+---
+question: |
+  What else do you need help with?
+field: other_option
+choices:
+  - I want to know about a legal term: legal_term
+  - I would like to contact Centacare: contact
+---
+event: FAQ_screen
+question: Here is the FAQ screen
+subquestion: |
+  Add some content here for FAQs
+  
+  % if children_fin == 'Children':
+  Here are the FAQs for children
+  
+  [What do I do when there is an important event?](${ url_of('A1_question.pdf') })
+  
+  Then what you can do is add hyperlinks for each of your FAQ screens on children
+  % else:
+  Here are the FAQs on financial matters
+  % endif
+  
+buttons:
+  - Restart: restart
+  - Exit: exit
+---
+# This is the contact Centacare screen
+event: contact_screen
+question: It seems like you need further assistance, you can contact Centacare using the details below. 
+subquestion: |
+
+  
+  Alternatively select exit to be taken to the website.
+  
+  Thank you for using our application.
+  
+  Address: 45 Wakefield Street Adelaide SA 5000
+  
+  Phone:  08 8215 6700
+  
+  Email: enquiries@centacare.org.au
+buttons: 
+  - Restart: restart
+  - Exit: exit
+    url: https://centacare.org.au/
+---
