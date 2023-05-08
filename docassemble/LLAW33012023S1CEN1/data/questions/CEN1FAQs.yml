@@ -1,0 +1,10 @@
+template: BFA_FAQ
+subject: All about Binding Financial Agreements
+content: |
+  This is markdown that describes the FAQ
+---
+template: custody_FAQ
+subject: About parenting agreements
+content: |
+  something goes here
+---

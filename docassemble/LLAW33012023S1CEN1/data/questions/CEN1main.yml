@@ -15,14 +15,30 @@ buttons:
 mandatory: True
 code: |
   if already_separated or currently_separating:
-    children_fin
-    Ag_option
+    if children_fin == 'Children':
+      if have_agreements:
+        # Something here
+        pass
+    elif children_fin == 'Financial':
+      if has_bfa:
+        display_bfa_faqs
+      else:
+        if orders_in_place:
+          display_has_orders_faq
+        else:
+          if want_financial_order:
+            display_financial_order_faq
+          else:
+            contact_centrecare
+    elif children_fin == 'Other':
+      # Other questions
+      pass
   else:
     if other_option == 'legal term':
       Legal_Terms_screen
     else:
       contact_screen
----
+---    
 question: |
   Please provide the following information
 fields:
@@ -42,6 +58,7 @@ field: children_fin
 choices:
   - Children
   - Financial
+  - Other
 ---
 question: Co-Parent Connect
 subquestion: |
@@ -98,4 +115,16 @@ buttons:
   - Restart: restart
   - Exit: exit
     url: https://centacare.org.au/
+---
+event: display_bfa_faqs
+question: About BFAs
+subquestion: |
+  Explanatory text
+  
+  ### ${BFA_FAQ.subject}
+  
+  ${BFA_FAQ.content}
+buttons:
+  - Exit: exit
+  - Restart: restart
 ---
