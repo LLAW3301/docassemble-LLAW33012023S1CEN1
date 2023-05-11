@@ -17,7 +17,7 @@ code: |
   if already_separated or currently_separating:
     if children_fin == 'Children':
       if have_agreements:
-        # Something here
+        Pa_option
         pass
     elif children_fin == 'Financial':
       if has_bfa:
@@ -68,7 +68,27 @@ fields:
      datatype: radio
      choices:
         - Yes: Continue
-        - No: ContactScreen
+        - No: Continue
+---
+question: Co-Parent Connect
+subquestion: |
+  Do you have issues or questions about a parenting agreement?
+fields:
+   - no label: Pa_option
+     datatype: radio
+     choices:
+        - Yes: Continue
+        - No: Continue
+---
+question: Co-Parent Connect
+subquestion: |
+  If you don't have issues or questions about a parenting agreement, do you want one drawn up?
+fields:
+   - no label: Pai_option
+     datatype: radio
+     choices:
+        - Yes: Continue
+        - No: Continue
 ---
 question: |
   What else do you need help with?
