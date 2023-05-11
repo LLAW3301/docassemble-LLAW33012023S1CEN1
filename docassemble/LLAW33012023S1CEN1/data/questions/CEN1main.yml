@@ -1,4 +1,7 @@
 ---
+include:
+  - Importantevent.yml
+---
 # This is our welcome screen
 mandatory: True
 question: Welcome to Co-Parent Connect by Centacare
@@ -16,9 +19,10 @@ mandatory: True
 code: |
   if already_separated or currently_separating:
     if children_fin == 'Children':
-      if have_agreements:
-        Pa_option
-        pass
+      if have_agreements == 'Yes':
+        if FAQ_1 == 'Can I change our parenting plan if I need the kids for an important event/occasion?':
+          Importantevent
+        
     elif children_fin == 'Financial':
       if has_bfa:
         display_bfa_faqs
@@ -29,7 +33,7 @@ code: |
           if want_financial_order:
             display_financial_order_faq
           else:
-            contact_centrecare
+            contact_screen
     elif children_fin == 'Other':
       # Other questions
       pass
@@ -64,11 +68,11 @@ question: Co-Parent Connect
 subquestion: |
   Is there an agreement in place?
 fields:
-   - no label: Ag_option
+   - no label: have_agreements
      datatype: radio
      choices:
-        - Yes: Continue
-        - No: Continue
+        - Yes
+        - No
 ---
 question: Co-Parent Connect
 subquestion: |
@@ -94,24 +98,20 @@ question: |
   What else do you need help with?
 field: other_option
 choices:
-  - I want to know about a legal term: legal_term
+  - I want to know about a legal term: legal term
   - I would like to contact Centacare: contact
 ---
-event: FAQ_screen
-question: Here is the FAQ screen
-subquestion: |
-  Add some content here for FAQs
-  
-  % if children_fin == 'Children':
-  Here are the FAQs for children
-  
-  [What do I do when there is an important event?](${ url_of('A1_question.pdf') })
-  
-  Then what you can do is add hyperlinks for each of your FAQ screens on children
-  % else:
-  Here are the FAQs on financial matters
-  % endif
-  
+
+question: | 
+  What do you have questions about?
+field: FAQ_1
+choices:
+  - Can I change our parenting plan if I need the kids for an important event/occasion?
+---
+event: Legal_Terms_screen
+question: Here is the legal terms screen
+subquestion: | 
+  Add some content here for legal terms
 buttons:
   - Restart: restart
   - Exit: exit

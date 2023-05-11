@@ -1,0 +1,9 @@
+---
+event: Importantevent
+question: Can I change our parenting plan if I need the kids for an important event/occasion?
+subquestion: |
+  Yes; the first step, if it is safe to do so and you are comfortable, is to contact the other party/ies to your parenting plan, to see if they will agree to your suggested changes. You may also communicate through your lawyers if appropriate. As a parenting plan is not court ordered, any changes in parenting plans simply need to be agreed by parties to the plan.
+buttons: 
+  - Restart: restart
+  - Exit: exit
+---
