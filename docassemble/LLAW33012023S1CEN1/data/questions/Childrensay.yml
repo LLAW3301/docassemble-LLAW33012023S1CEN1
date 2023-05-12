@@ -1,0 +1,9 @@
+---
+event: Childrensay
+question: Can our child(ren) have a say in where they stay?
+subquestion: |
+  Children do not have a definitive say in where, or with which parent they stay with. A child’s wishes is one of the many factors that the Court has to consider when determining what decisions are in the child’s best interests. The older and more mature the child is, the less likely it is that the Court will make decisions in opposition to their wishes. Although there is no set-age at which a child can make their choice as to where they stay, they usually reach a point in their mid-teens where they can physically place themselves where they prefer.
+buttons: 
+  - Restart: restart
+  - Exit: exit
+---

@@ -1,0 +1,12 @@
+---
+event: Orderplan
+question: What is the difference between a parenting order and a parenting plan?
+subquestion: |
+  A parenting order is a court ordered and legally enforceable document.
+  A parenting plan is a written agreement between co-parents. Parenting plans are not court ordered or enforceable.
+  See glossary definitions for more details.
+
+buttons: 
+  - Restart: restart
+  - Exit: exit
+---

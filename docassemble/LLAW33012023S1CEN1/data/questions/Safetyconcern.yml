@@ -1,0 +1,10 @@
+---
+event: Safetyconcern
+question: Who do I speak to if I am concerned for my child(rens) safety when they are with the other parent?
+subquestion: |
+  If there are Court orders in place, do not go against these orders without real grounds that any party’s (child/parent/etc.) health and/or safety is in jeopardy. Seek legal advice on your individual situation; if you breach your parenting order without real grounds, you may be punished by the court.
+  If there are no Court orders in place, ensure your child is in a safe environment, and then seek legal advice regarding your situation. 
+buttons: 
+  - Restart: restart
+  - Exit: exit
+---

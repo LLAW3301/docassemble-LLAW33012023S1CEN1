@@ -1,6 +1,15 @@
 ---
 include:
   - Importantevent.yml
+  - Rightsasparent.yml
+  - Unhappy.yml
+  - Breakingorder.yml
+  - Copy.yml
+  - Childrensay.yml
+  - Safetyconcern.yml
+  - Childsupport.yml
+  - Orderplan.yml
+  - Support.yml
 ---
 # This is our welcome screen
 mandatory: True
@@ -20,9 +29,31 @@ code: |
   if already_separated or currently_separating:
     if children_fin == 'Children':
       if have_agreements == 'Yes':
-        if FAQ_1 == 'Can I change our parenting plan if I need the kids for an important event/occasion?':
-          Importantevent
-        
+        if questions_about_agreement == 'Yes':
+           if custody_option == 'Yes':
+             if FAQ_1 == 'Can I change our parenting plan if I need the kids for an important event/occasion?':
+                  Importantevent
+                 else:
+                 if FAQ_1 == 'Where can I find my rights as a parent sharing custody?':
+                   Rightsasparent
+                 if FAQ_1 == 'Where do I go if I am unhappy with the parenting order?':
+                   Unhappy
+                 if FAQ_1 == 'Who do I speak to if my co-parent is breaking the parenting order?':
+                   Breakingorder
+                 if FAQ_1 == 'Where can I find a copy of our parenting order?':
+                   Copy
+                 if FAQ_1 == 'If a parent goes against the parenting order, can the court change its mind?':
+                   Courtchange
+                 if FAQ_1 == 'Can our child(ren) have a say in where they stay?':
+                   Childrensay
+                 if FAQ_1 == 'Who do I speak to if I am concerned for my child(rens) safety when they are with the other parent?':
+                   Safetyconcern
+                 if FAQ_1 == 'What do I do if the other parent isn’t making the child-support payments ordered by the court?':
+                   Childsupport
+                 if FAQ_1 == 'What is the difference between a parenting order and a parenting plan?'
+                   Orderplan
+                 if FAQ_1 == 'I don’t understand my parenting order, who can I speak to about this?'
+                   Support
     elif children_fin == 'Financial':
       if has_bfa:
         display_bfa_faqs
@@ -78,11 +109,11 @@ question: Co-Parent Connect
 subquestion: |
   Do you have issues or questions about a parenting agreement?
 fields:
-   - no label: Pa_option
+   - no label: questions_about_agreement
      datatype: radio
      choices:
-        - Yes: Continue
-        - No: Continue
+        - Yes
+        - No
 ---
 question: Co-Parent Connect
 subquestion: |
@@ -91,8 +122,18 @@ fields:
    - no label: Pai_option
      datatype: radio
      choices:
-        - Yes: Continue
-        - No: Continue
+        - Yes
+        - No
+---
+question: Co-Parent Connect
+subquestion: |
+  Do you have questions about your rights as a parent sharing custody?
+fields:
+   - no label: custody_option
+     datatype: radio
+     choices:
+        - Yes
+        - No
 ---
 question: |
   What else do you need help with?
@@ -101,12 +142,21 @@ choices:
   - I want to know about a legal term: legal term
   - I would like to contact Centacare: contact
 ---
-
 question: | 
   What do you have questions about?
 field: FAQ_1
 choices:
   - Can I change our parenting plan if I need the kids for an important event/occasion?
+  - Where can I find my rights as a parent sharing custody?
+  - Where do I go if I am unhappy with the parenting order?
+  - Who do I speak to if my co-parent is breaking the parenting order?
+  - Where can I find a copy of our parenting order? 
+  - If a parent goes against the parenting order, can the court change its mind?
+  - Can our child(ren) have a say in where they stay?
+  - Who do I speak to if I am concerned for my child(rens) safety when they are with the other parent?
+  - What do I do if the other parent isn’t making the child-support payments ordered by the court?
+  - What is the difference between a parenting order and a parenting plan?
+  - I don’t understand my parenting order, who can I speak to about this?
 ---
 event: Legal_Terms_screen
 question: Here is the legal terms screen

@@ -1,0 +1,10 @@
+---
+event: Copy
+question: Where can I find a copy of our parenting order?
+subquestion: |
+  Court orders (except appeals) are signed and sealed electronically and available to download from the Commonwealth Courts Portal (the Portal).(link)
+  Find more details on how to register for the Portal and how to access your documents at https://www.fcfcoa.gov.au/hdi/access-my-orders 
+buttons: 
+  - Restart: restart
+  - Exit: exit
+---
