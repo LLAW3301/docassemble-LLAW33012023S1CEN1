@@ -335,13 +335,15 @@ fields:
   - "Do you have a question about your safety?": question_safety
     datatype: yesnoradio
 ---
-# Here is the code for the glossary. Each line has 'image' inserted in to make the app more visual and easy to understand. This creates simple buttons for the user to take them to each defintition. 
+# Here is the code for the glossary. Each line has 'image' inserted in to make the app more visual and easy to understand. This creates simple buttons for the user to take them to each defintition.
+css class: GlossaryButtonHeader
 question: | 
-   Do you want to know about a legal term? 
+   What legal term would you like to know about?
 field: FAQ_other_y
 buttons:
   - "Adjourn": Adjourn
     image: Adjourn
+    color: info
   - "Advocate": Advocate
     image: Advocate
   - "Affidavit": Affidavit
