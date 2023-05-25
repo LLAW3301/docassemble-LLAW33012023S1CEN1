@@ -4,5 +4,5 @@ A docassemble extension.
 
 ## Author
 
-Mark Ferraretto, mark.ferraretto@flinders.edu.au
+Matilda Bartlett, bart0408@flinders.edu.au
 

@@ -1,0 +1,107 @@
+---
+# This code does the YYY branch
+# You need to create 8 code blocks (so this is number 1 of 8)
+# Each code block refers to the appropriate multichoice screen
+# Then each code block will change the display template using an if-elif block
+# Don't forget to set the branch_YYY Boolean at the end!
+code: |
+  if FAQ_child_YYY == 'Can I change our parenting plan if I need the kids for an important event/occasion?':
+    display_template = childYYY_FAQ1
+  elif FAQ_child_YYY == 'Where can I find my rights as a parent sharing custody?':
+    display_template = childYYY_FAQ2
+  elif FAQ_child_YYY == 'Where do I go if I am unhappy with the parenting order?':
+    display_template = childYYY_FAQ3
+  elif FAQ_child_YYY == 'Who do I speak to if my co-parent is breaking the parenting order?':
+    display_template = childYYY_FAQ4
+  elif FAQ_child_YYY == 'Where can I find a copy of our parenting order?':
+    display_template = childYYY_FAQ5
+  elif FAQ_child_YYY == 'If a parent goes against the parenting order, can the court change its mind?':
+    display_template = childYYY_FAQ6
+  elif FAQ_child_YYY == 'Can our child(ren) have a say in where they stay?':
+    display_template = childYYY_FAQ7
+  elif FAQ_child_YYY == 'Who do I speak to if I am concerned for my child(rens) safety when they are with the other parent?':
+    display_template = childYYY_FAQ8
+  elif FAQ_child_YYY == 'What do I do if the other parent isn’t making the child-support payments ordered by the court?':
+    display_template = childYYY_FAQ9
+  elif FAQ_child_YYY == 'What is the difference between a parenting order and a parenting plan?':
+    display_template = childYYY_FAQ10
+  elif FAQ_child_YYY == 'I don’t understand my parenting order, who can I speak to about this?':
+    display_template = childYYY_FAQ11
+    
+  branch_YYY = True
+---
+# This code does the YYN branch
+# You need to create 8 code blocks (so this is number 2 of 8)
+# Each code block refers to the appropriate multichoice screen
+# Then each code block will change the display template using an if-elif block
+# Don't forget to set the branch_YYY Boolean at the end!
+code: |
+  if FAQ_child_YYN == 'Can I change our parenting plan if I need the kids for an important event/occasion?':
+    display_template = childYYN_FAQ1
+  elif FAQ_child_YYN == 'Where do I go if I am unhappy with the parenting order?':
+    display_template = childYYN_FAQ2
+  elif FAQ_child_YYN == 'Who do I speak to if my co-parent is breaking the parenting order?':
+    display_template = childYYN_FAQ3
+  elif FAQ_child_YYN == 'Where can I find a copy of our parenting order?':
+    display_template = childYYN_FAQ4
+  elif FAQ_child_YYN == 'If a parent goes against the parenting order, can the court change its mind?':
+    display_template = childYYN_FAQ5
+  elif FAQ_child_YYN == 'Who do I speak to if I am concerned for my child(rens) safety when they are with the other parent?':
+    display_template = childYYN_FAQ6
+  elif FAQ_child_YYN == 'What do I do if the other parent isn’t making the child-support payments ordered by the court?':
+    display_template = childYYN_FAQ7
+  elif FAQ_child_YYN == 'What is the difference between a parenting order and a parenting plan?':
+    display_template = childYYN_FAQ8
+  elif FAQ_child_YYN == 'I don’t understand my parenting order, who can I speak to about this?':
+    display_template = childYYN_FAQ9
+    
+  branch_YYN = True
+---
+# codes the NYY branch
+code: |
+  if FAQ_child_NYY == 'Where can I find my rights as a parent sharing custody?':
+    display_template = childNYY_FAQ1
+  elif FAQ_child_NYY == 'Can our child(ren) have a say in where they stay??':
+    display_template = childNYY_FAQ2
+  elif FAQ_child_NYY == 'Who do I speak to if I am concerned for my child(rens) safety when they are with the other parent?':
+    display_template = childNYY_FAQ3
+  elif FAQ_child_NYY == 'What do I do if the other parent isn’t making the child-support payments ordered by the court??':
+    display_template = childNYY_FAQ4
+  elif FAQ_child_NYY == 'What is the difference between a parenting order and a parenting plan?':
+    display_template = childNYY_FAQ5
+  elif FAQ_child_NYY == 'Where do I go to have a parenting order or custody order drawn up?':
+    display_template = childNYY_FAQ6
+  elif FAQ_child_NYY == 'What is the most cost-effective method for obtaining a legally drafted document?':
+    display_template = childNYY_FAQ7
+    
+  branch_NYY = True
+---
+# codes the NNY branch
+code: |
+  if FAQ_child_NNY == 'Where can I find my rights as a parent sharing custody?':
+    display_template = childNNY_FAQ1
+  
+  branch_NNY = True
+---
+# codes the NYN branch
+code: |
+  if FAQ_child_NYN == 'Can our child(ren) have a say in where they stay?':
+    display_template = childNYN_FAQ1
+  elif FAQ_child_NYN == 'What is the difference between a parenting order and a parenting plan?':
+    display_template = childNYN_FAQ2
+  elif FAQ_child_NYN == 'Where do I go to have a parenting order or custody order drawn up?':
+    display_template = childNYN_FAQ3
+  
+  branch_NYN = True
+---
+# codes the YNY branch
+code: |
+  if FAQ_child_YNY == 'Where can I find my rights as a parent sharing custody?':
+    display_template = childYNY_FAQ1
+  elif FAQ_child_YNY == 'Who do I speak to if I am concerned for my child(rens) safety when they are with the other parent?':
+    display_template = childYNY_FAQ2
+  elif FAQ_child_YNY == 'What do I do if the other parent isn’t making the child-support payments ordered by the court?':
+    display_template = childYNY_FAQ3
+    
+  branch_YNY = True
+---

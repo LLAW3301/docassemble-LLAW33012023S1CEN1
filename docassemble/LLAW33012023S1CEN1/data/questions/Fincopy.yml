@@ -1,0 +1,9 @@
+---
+event: Fincopy
+question: Where can I find a copy of our financial agreement?
+subquestion: |
+  You should have received a copy of your financial agreement once it was signed by both parties. However, if you are unable to locate this, contact your lawyer who should have a copy stored on file. 
+buttons: 
+  - Restart: restart
+  - Exit: exit
+---

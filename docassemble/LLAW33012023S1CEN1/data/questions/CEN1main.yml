@@ -1,4 +1,42 @@
 ---
+include:
+  - Glossary.yml
+  - FAQanswerscode.yml
+  - CEN1FAQ_Flow.yml
+  - CEN1Other_FAQ.yml
+  - CEN1FAQ_fin_flow.yml
+  - CEN1FAQ_Fin.yml
+  - display_financial_order_faq.yml
+  - display_bfa_faqs.yml
+  - Images.yml
+---
+features:
+  css: prototype.css
+  debug: False
+  hide standard menu: True
+  navigation: True
+  go full screen: True
+---
+# Setting the standard text to be applied through co-parent connect, through the css prototype file. In addition this sets the colour and colour transitions of all buttons on co-parent connect. All colours and buttons are based off the same text and colours and button behaviour found on the Centacare website
+---
+  # sets the logo for Co-Parent Connect with reference to the png file in the static files.
+  # objects:
+  #  - BTlogo: DAStaticFile.using(filename='ADD LOGO PNG HERE’)
+  #---
+  #mandatory: True
+  #code: |
+  #  set_parts(logo='<img src="' + BTlogo.url_for() + '" style="height: 78px; alt=''">')
+  #---
+  #metadata:
+  #  title: |
+  #    Co-Parent Connect
+  #  description: |
+  #    A Guide for people seeking advice as they go through seperation or divorce.
+  #  authors:
+  #- name: Matilda Bartlett, Madison Millward, Danielle Ghinis, Jacinta Best, Isabella Mulholland,       # Jiyoon Kim
+  #      organization: Flinders University
+  #  revision_date: 2023-06-01
+---
 # This is our welcome screen
 mandatory: True
 question: Welcome to Co-Parent Connect by Centacare
@@ -11,34 +49,91 @@ buttons:
   - Exit: exit
     url: https://centacare.org.au/
 ---
-# Creating a new mandatory block here which links users to FAQs.
+# Mandatory block which links users to FAQs.
 mandatory: True
+# This is the main 'if' statement that will direct the entire app
+# The first branch is 'children' related questions. It will use the initial opening questions to determine if the person is eligible to continue by being either divorced or going through divorce before taking the user to the option screen of 'children', 'financial', or 'other'. If they select the children option the code will them move to the first section of the if statement below. 
+ # Next is the financial branch. If the user selects they have a financial related question they will be taken here. They will first be asked some funneling questions before being presented with some relevant FAQs to their matter. This if statement determines which FAQs to present them depending on how they answer each question.
+  # This is followed by the if statement for the 'other' branch. If they have a question that is not related to a child or a financial matter this is where they will be taken. Once again they will be asked a series of questions to determine if the app is able to provide answers. If not it will take the user to the 'contact centacare' screen. 
 code: |
   if already_separated or currently_separating:
     if children_fin == 'Children':
-      if have_agreements:
-        Pa_option
-        pass
+      if have_agreements == 'Yes':
+        if questions_about_agreement == 'Yes':
+           if custody_option == 'Yes':
+             branch_YYY
+             display_faq_screen
+           elif custody_option == 'No':
+             branch_YYN
+             display_faq_screen
+        elif questions_about_agreement == 'No':
+          if custody_option == 'Yes':
+            branch_YNY
+            display_faq_screen
+          elif custody_option == 'No':
+            if question_legal_term:
+              other_branch_legal_term
+              display_faq_screen
+            else:
+              contact_screen
+      elif have_agreements == 'No': 
+        if drawn_up_option == 'No':
+          if custody_option == 'Yes':
+            branch_NNY
+            display_faq_screen
+          elif custody_option == 'No':
+            if question_legal_term:
+              other_branch_legal_term
+              display_faq_screen
+            else:
+              contact_screen
+        elif drawn_up_option == 'Yes':
+          if custody_option == 'Yes':
+            branch_NYY
+            display_faq_screen
+          elif custody_option == 'No':
+            branch_NYN
+            display_faq_screen
     elif children_fin == 'Financial':
       if has_bfa:
-        display_bfa_faqs
+        branch_fin_y
+        display_faq_screen
       else:
         if orders_in_place:
-          display_has_orders_faq
+          branch_fin_yy
+          display_faq_screen
         else:
           if want_financial_order:
-            display_financial_order_faq
+            branch_fin_yyy 
+            display_faq_screen
           else:
-            contact_centrecare
+            if question_legal_term:
+              other_branch_legal_term
+              display_faq_screen
+            else:
+              contact_screen
     elif children_fin == 'Other':
-      # Other questions
-      pass
-  else:
-    if other_option == 'legal term':
-      Legal_Terms_screen
-    else:
-      contact_screen
----    
+      if question_legal_term:
+        other_branch_legal_term
+        display_faq_screen
+      else:
+        if question_legal_rights:
+          Rightasparent_screen
+          display_faq_screen
+        else:
+          if question_legal_docs:
+           Legaldocument_screen
+           display_faq_screen
+          else:
+            if question_safety:
+              Safetyconcern_screen
+              display_faq_screen
+            else: 
+              contact_screen
+  else: 
+    contact_screen
+--- 
+ # These are the initial questions that will ensure the user is eligible to move forward with the app. If the user is not, it will take them to the contact centacare screen as the app will be unable to answer their questions. 
 question: |
   Please provide the following information
 fields:
@@ -51,6 +146,7 @@ fields:
   - "Are you currently separating or divorcing?": currently_separating
     datatype: yesnoradio
 ---
+  # This is the main slection screen where the user can choose what their matter is related to. 
 question: Co-Parent Connect
 subquestion: |
   Does your matter relate to children or financial matters?
@@ -60,61 +156,291 @@ choices:
   - Financial
   - Other
 ---
+# From here down are the codes for the questions that will be asked depending on what option the user selects. 
 question: Co-Parent Connect
 subquestion: |
   Is there an agreement in place?
 fields:
-   - no label: Ag_option
+   - no label: have_agreements
      datatype: radio
      choices:
-        - Yes: Continue
-        - No: Continue
+        - Yes
+        - No
 ---
 question: Co-Parent Connect
 subquestion: |
   Do you have issues or questions about a parenting agreement?
 fields:
-   - no label: Pa_option
+   - no label: questions_about_agreement
      datatype: radio
      choices:
-        - Yes: Continue
-        - No: Continue
+        - Yes
+        - No
 ---
 question: Co-Parent Connect
 subquestion: |
   If you don't have issues or questions about a parenting agreement, do you want one drawn up?
 fields:
-   - no label: Pai_option
+   - no label: drawn_up_option
      datatype: radio
      choices:
-        - Yes: Continue
-        - No: Continue
+        - Yes
+        - No
+---
+question: Co-Parent Connect
+subquestion: |
+  Do you have questions about your rights as a parent sharing custody?
+fields:
+   - no label: custody_option
+     datatype: radio
+     choices:
+        - Yes
+        - No
 ---
 question: |
   What else do you need help with?
 field: other_option
 choices:
-  - I want to know about a legal term: legal_term
+  - I want to know about a legal term: legal term
   - I would like to contact Centacare: contact
 ---
-event: FAQ_screen
-question: Here is the FAQ screen
-subquestion: |
-  Add some content here for FAQs
-  
-  % if children_fin == 'Children':
-  Here are the FAQs for children
-  
-  [What do I do when there is an important event?](${ url_of('A1_question.pdf') })
-  
-  Then what you can do is add hyperlinks for each of your FAQ screens on children
-  % else:
-  Here are the FAQs on financial matters
-  % endif
-  
+# We need one FAQ multiple choice field for every branch of your flowchart
+# So that's 8 in total. However, two go to screens that are already created such as the glossary and contact centacare.
+# This is number 1
+# They need to display the questions for each branch of the flowchart
+# Set the field to an equivalent of FAQ_child_XXX (where XXX is the branch of your flowchart)
+question: | 
+  What do you have questions about?
+field: FAQ_child_YYY
+choices:
+  - Can I change our parenting plan if I need the kids for an important event/occasion?
+  - Where can I find my rights as a parent sharing custody?
+  - Where do I go if I am unhappy with the parenting order?
+  - Who do I speak to if my co-parent is breaking the parenting order?
+  - Where can I find a copy of our parenting order? 
+  - If a parent goes against the parenting order, can the court change its mind?
+  - Can our child(ren) have a say in where they stay?
+  - Who do I speak to if I am concerned for my child(rens) safety when they are with the other parent?
+  - What do I do if the other parent isn’t making the child-support payments ordered by the court?
+  - What is the difference between a parenting order and a parenting plan?
+  - I don’t understand my parenting order, who can I speak to about this?
+---
+# We need one FAQ multiple choice field for every branch of your flowchart
+# So that's 8 in total - so this is number 2
+# They need to display the questions for each branch of the flowchart
+question: | 
+  What do you have questions about?
+field: FAQ_child_YYN
+choices:
+  - Can I change our parenting plan if I need the kids for an important event/occasion?
+  - Where do I go if I am unhappy with the parenting order?
+  - Who do I speak to if my co-parent is breaking the parenting order?
+  - Where can I find a copy of our parenting order? 
+  - If a parent goes against the parenting order, can the court change its mind?
+  - Who do I speak to if I am concerned for my child(rens) safety when they are with the other parent?
+  - What do I do if the other parent isn’t making the child-support payments ordered by the court?
+  - What is the difference between a parenting order and a parenting plan?
+  - I don’t understand my parenting order, who can I speak to about this?
+---
+# We need one FAQ multiple choice field for every branch of your flowchart
+# So that's 8 in total - so this is number 3
+# They need to display the questions for each branch of the flowchart
+question: | 
+  What do you have questions about?
+field: FAQ_child_NYY
+choices:
+  - Where can I find my rights as a parent sharing custody?
+  - Can our child(ren) have a say in where they stay?
+  - Who do I speak to if I am concerned for my child(rens) safety when they are with the other parent?
+  - What do I do if the other parent isn’t making the child-support payments ordered by the court?
+  - What is the difference between a parenting order and a parenting plan?
+  - Where do I go to have a parenting order or custody order drawn up?
+  - What is the most cost-effective method for obtaining a legally drafted document?
+---
+# We need one FAQ multiple choice field for every branch of your flowchart
+# So that's 8 in total - so this is number 4
+# They need to display the questions for each branch of the flowchart
+question: | 
+  What do you have questions about?
+field: FAQ_child_NYN
+choices:
+  - Can our child(ren) have a say in where they stay?
+  - What is the difference between a parenting order and a parenting plan?
+  - Where do I go to have a parenting order or custody order drawn up?
+---
+# We need one FAQ multiple choice field for every branch of your flowchart
+# So that's 8 in total - so this is number 5
+# They need to display the questions for each branch of the flowchart
+question: | 
+  What do you have questions about?
+field: FAQ_child_NNY
+choices:
+  - Where can I find my rights as a parent sharing custody?
+---
+# We need one FAQ multiple choice field for every branch of your flowchart
+# So that's 8 in total - so this is number 6
+# They need to display the questions for each branch of the flowchart
+question: | 
+  What do you have questions about?
+field: FAQ_child_YNY
+choices:
+  - Where can I find my rights as a parent sharing custody?
+  - Who do I speak to if I am concerned for my child(rens) safety when they are with the other parent?
+  - What do I do if the other parent isn’t making the child-support payments ordered by the court?
+---
+# Here are more questions for if the user selects they have a financial related question. 
+question: |
+  Please provide the following information
+fields:
+  - "Do you have a BFA?": has_bfa
+    datatype: yesnoradio
+---
+question: |
+  Please provide the following information
+fields:
+  - "Are any orders in place?": orders_in_place
+    datatype: yesnoradio
+---
+question: |
+  Please provide the following information
+fields:
+  - "Are you wanting some type of financial order drawn up?": want_financial_order
+    datatype: yesnoradio
+---
+# This is the question for if they want to know about a legal term, in which case it will take them to the glossary.
+question: |
+  Please provide the following information
+fields:
+  - "Do you have a question about a particular legal term?": question_legal_term
+    datatype: yesnoradio
+---
+# This is for if they don't have a question related to the three options but have a question about their legal rights.
+question: |
+  Please provide the following information
+fields:
+  - "Do you have a question about your legal rights?": question_legal_rights
+    datatype: yesnoradio
+---
+# This is for if they don't have a question related to the three options but have a question about legal documents. 
+question: |
+  Please provide the following information
+fields:
+  - "Do you have a question about legal documentation?": question_legal_docs
+    datatype: yesnoradio
+---
+# This is for if they don't have a question related to the three options but have a question about safety. 
+question: |
+  Please provide the following information
+fields:
+  - "Do you have a question about your safety?": question_safety
+    datatype: yesnoradio
+---
+# Here is the code for the glossary. Each line has 'image' inserted in to make the app more visual and easy to understand. This creates simple buttons for the user to take them to each defintition. 
+question: | 
+   Do you want to know about a legal term? 
+field: FAQ_other_y
 buttons:
+  - "Adjourn": Adjourn
+    image: Adjourn
+  - "Advocate": Advocate
+    image: Advocate
+  - "Affidavit": Affidavit
+    image: Affidavit
+  - "Alternative Dispute Resolution": Alternative Dispute Resolution
+    image: Alternative Dispute Resolution
+  - "Appeal": Appeal
+    image: Appeal
+  - "Applicant": Applicant
+    image: Applicant
+  - "Child Support": Child Support
+    image: Child Support
+  - "Child Support Agreement": Child Support Agreement
+    image: Child Support Agreement
+  - "Client": Client
+    image: Client
+  - "Conciliation Conference": Conciliation Conference
+    image: Conciliation Conference
+  - "Confidentiality": Confidentiality
+    image: Confidentiality 
+  - "Contravention Application": Contravention Application
+    image: Contravention Application
+  - "Custody": Custody
+    image: Custody
+  - "Consent Order": Consent Order
+    image: Consent Order
+  - "Court Fees": Court Fees
+    image: Court Fees
+  - "De-Facto Relationship": De-Facto Relationship
+    image: De-Facto Relationship
+  - "Dispute": Dispute
+    image: Dispute
+  - "Divorce Order": Divorce Order
+    image: Divorce Order
+  - "Family Dispute Resolution": Family Dispute Resolution
+    image: Family Dispute Resolution
+  - "Family Law Court": Family Law Court
+    image: Family Law Court
+  - "Family Report": Family Report
+    image: Family Report
+  - "Financial Agreement": Financial Agreement
+    image: Financial Agreement
+  - "Financial Order": Financial Order
+    image: Financial Order
+  - "Independent Children's Lawyer": Independent Childrens Lawyer
+    image: Independent Childrens Lawyer
+  - "Interim Order": Interim Order
+    image: Interim Order
+  - "Interlocutory Order": Interlocutory Order
+    image: Interlocutory Order
+  - "Intervention": Intervention
+    image: Intervention
+  - "Mediation": Mediation
+    image: Mediation
+  - "Negotiation": Negotiation
+    image: Negotiation
+  - "Parenting Order": Parenting Order
+    image: Parenting Order
+  - "Parenting Plan": Parenting Plan
+    image: Parenting Plan
+  - "Practitioner": Practitioner
+    image: Practitioner
+  - "Respondent": Respondent
+    image: Respondent
+  - "Subpoena": Subpoena
+    image: Subpoena    
+  - "Spouse": Spouse
+    image: Spouse
+---
+# Here is where the user is taken if they have a question or concern about their safety. 
+event: Safetyconcern_screen
+question: I have a question/concern about safety
+subquestion: |
+  If there are Court orders in place, do not go against these orders without real grounds that any party’s (child/parent/etc) health and/or safety is in jeopardy. Seek legal advice on your individual situation; if you breach your parenting order without real grounds, you may be punished by the court.
+  If there are no Court orders in place, ensure your child is in a safe environment, and then seek legal advice regarding your situation. 
+buttons: 
   - Restart: restart
   - Exit: exit
+    url: https://centacare.org.au/
+---
+# Here is where the user is taken if they have a question about their legal rights. 
+event: Rightasparent_screen
+question: I would like to learn about my legal rights
+subquestion: |
+  The Family Law Act 1975 is the authority on rights involving parenting disputes and resolutions. The Federal Circuit and Family Court of Australia has an informative website. For detailed advice specific to your situation, speak to your lawyer.
+buttons: 
+  - Restart: restart
+  - Exit: exit
+    url: https://centacare.org.au/
+---
+# Here is where the user is taken if they have a question about a legal document.
+event: Legaldocument_screen
+question: I have a question about a legal document
+subquestion: |
+  The Family Law Act 1975 is the authority on rights involving parenting disputes and resolutions. The Federal Circuit and Family Court of Australia has an informative website. For detailed advice specific to your situation, speak to your lawyer.
+buttons: 
+  - Restart: restart
+  - Exit: exit
+    url: https://centacare.org.au/
 ---
 # This is the contact Centacare screen
 event: contact_screen
@@ -136,15 +462,48 @@ buttons:
   - Exit: exit
     url: https://centacare.org.au/
 ---
-event: display_bfa_faqs
-question: About BFAs
+# This is the contact Centacare CHILD screen
+event: child_end_contact_screen
+question: It seems like you need further assistance, you can contact Centacare using the details below. 
 subquestion: |
-  Explanatory text
+
   
-  ### ${BFA_FAQ.subject}
+  Alternatively select exit to be taken to the website.
   
-  ${BFA_FAQ.content}
+  Thank you for using our application.
+  
+  Address: 45 Wakefield Street Adelaide SA 5000
+  
+  Phone:  08 8215 6700
+  
+  Email: enquiries@centacare.org.au
+buttons: 
+  - Restart: restart
+  - Exit: exit
+    url: https://centacare.org.au/
+---
+event: display_faq_screen
+question: Co-Parent Connect
+subquestion: |
+  
+  ### ${display_template.subject}
+  ${display_template.content}
+
 buttons:
   - Exit: exit
   - Restart: restart
+---
+---
+# Establishes that the Flinders accreditation is displayed on every single page of Co-Parent Connect, and that the application was created in colaboration with Centacare.
+default screen parts:
+  post: |
+    <div style="display: flex; height: 200px; align-items: flex-end; flex-direction: row-reverse">
+    <div style="margin: 5px"><img src="https://staff.flinders.edu.au/etc.clientlibs/flinders/clientlibs/clientlib-site/resources/images/flinderuni_main_logo_black.png" height="40">
+    </div>
+    <div style="margin: 5px; text-align: right">
+    <cite><small><i>
+    Developed by Flinders University in collaboration with Centacare Catholic Services
+    </i></small></cite>
+    </div>
+    </div>
 ---

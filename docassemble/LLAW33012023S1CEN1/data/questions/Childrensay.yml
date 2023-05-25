@@ -1,0 +1,11 @@
+---
+event: Childrensay
+question: Can our child(ren) have a say in where they stay?
+subquestion: |
+  Children do not have an authoritative say in where or with who they stay with. 
+  
+  The court will consider the wishes of the children, but children who are older and more mature will more likely be granted residence where they prefer. 
+buttons: 
+  - Restart: restart
+  - Exit: exit
+---

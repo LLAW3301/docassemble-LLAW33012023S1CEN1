@@ -1,0 +1,75 @@
+---
+code: |
+  if FAQ_other_y == 'Parenting Order':
+    display_template = PO_Def
+  elif FAQ_other_y == 'Parenting Plan':
+    display_template = PP_Def
+  elif FAQ_other_y == 'Financial Order':
+    display_template = FO_Def
+  elif FAQ_other_y == 'Mediation':
+    display_template = MED_Def
+  elif FAQ_other_y == 'Affidavit':
+    display_template = AFF_Def
+  elif FAQ_other_y == 'Binding Financial Support Agreement':
+    display_template = BCSA_Def
+  elif FAQ_other_y == 'De-Facto Relationship':
+    display_template = DFR_Def
+  elif FAQ_other_y == 'Financial Agreement':
+    display_template = FA_Def
+  elif FAQ_other_y == 'Custody':
+    display_template = CUS_Def
+  elif FAQ_other_y == 'Negotiation':
+    display_template = NEG_Def
+  elif FAQ_other_y == 'Applicant':
+    display_template = APP_Def
+  elif FAQ_other_y == 'Child Support':
+    display_template = CS_Def
+  elif FAQ_other_y == 'Contravention Application':
+    display_template = CA_Def
+  elif FAQ_other_y == 'Divorce Order':
+    display_template = DO_Def
+  elif FAQ_other_y == 'Family Law Court':
+    display_template = FLC_Def
+  elif FAQ_other_y == 'Independent Childrens Lawyer':
+    display_template = ICL_Def
+  elif FAQ_other_y == 'Respondent':
+    display_template = RES_Def
+  elif FAQ_other_y == 'Client':
+    display_template = CLI_Def
+  elif FAQ_other_y == 'Advocate':
+    display_template = ADV_Def
+  elif FAQ_other_y == 'Subpoena':
+    display_template = SUB_Def
+  elif FAQ_other_y == 'Confidentiality':
+    display_template = CON_Def
+  elif FAQ_other_y == 'Practitioner':
+    display_template = PRAC_Def
+  elif FAQ_other_y == 'Interim Order':
+    display_template = INT_Def
+  elif FAQ_other_y == 'Court Fees':
+    display_template = CF_Def
+  elif FAQ_other_y == 'Family Dispute Resolution':
+    display_template = FDR_Def
+  elif FAQ_other_y == 'Interlocutory Order':
+    display_template = Int_Def
+  elif FAQ_other_y == 'Conciliation Conference':
+    display_template = CC_Def
+  elif FAQ_other_y == 'Appeal':
+    display_template = App_Def
+  elif FAQ_other_y == 'Family Report':
+    display_template = FR_Def
+  elif FAQ_other_y == 'Consent Order':
+    display_template = CO_Def
+  elif FAQ_other_y == 'Alternative Dispute Resolution':
+    display_template = ADR_Def
+  elif FAQ_other_y == 'Adjourn':
+    display_template = Adj_Def
+  elif FAQ_other_y == 'Dispute':
+    display_template = Disp_Def
+  elif FAQ_other_y == 'Intervention':
+    display_template = Int_Def
+  elif FAQ_other_y == 'Spouse':
+    display_template = Spo_Def
+    
+  other_branch_legal_term = True
+---

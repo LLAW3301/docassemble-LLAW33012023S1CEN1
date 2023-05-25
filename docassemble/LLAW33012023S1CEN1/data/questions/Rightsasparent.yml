@@ -1,0 +1,9 @@
+---
+event: Rightasparent
+question: Where can I find my rights as a parent sharing custody?
+subquestion: |
+  The Family Law Act 1975 is the authority on rights involving parenting disputes and resolutions. The Federal Circuit and Family Court of Australia has an informative website. For detailed advice specific to your situation, speak to your lawyer.
+buttons: 
+  - Restart: restart
+  - Exit: exit
+---

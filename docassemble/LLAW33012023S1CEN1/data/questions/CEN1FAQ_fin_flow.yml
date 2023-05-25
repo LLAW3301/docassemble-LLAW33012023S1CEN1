@@ -1,0 +1,26 @@
+---
+# Code does BFA branch 
+code: | 
+  if display_bfa_faqs == 'Where can I find a copy of our financial agreement?': 
+    display_template = FinFAQ1
+  elif display_bfa_faqs == 'What is a binding financial agreement?': 
+    display_template = FinFAQ2
+  
+  branch_fin_y = True
+---
+code: | 
+  if display_financial_order_faq == 'Where can I go to have a binding financial agreement drawn up?': 
+    display_template = FinFAQ3
+  elif display_financial_order_faq == 'What are the different types of financial orders?':
+    display_template = FinFAQ4
+  
+  branch_fin_yy = True
+---
+code: | 
+  if display_financial_order_faq == 'Where can I find a copy of my order?':  
+    display_template = FinFAQ5
+  elif display_financial_order_faq == 'What type of order do I have?':
+    display_template = FinFAQ6
+
+  branch_fin_yyy = True
+---

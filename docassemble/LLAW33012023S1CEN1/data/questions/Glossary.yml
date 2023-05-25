@@ -1,0 +1,195 @@
+---
+# This is the main glossary screen that provides definitions for each glossary term. 
+template: PO_Def
+subject: What is a Parenting Order?
+content: |
+ 
+ A set of rules decided by a judge in court that determines how a child/ren will be cared for, including where they live, visitation schedules, communication between parents, decision-making responsibilities, and conflict resolution. 
+ 
+ It differs from a parenting plan, as an agreement is made by parents without involving the court. See [*Family Law Act 1975 (Cth)* s 64B](https://www.legislation.gov.au/Details/C2019C00101/Html/Volume_1#_Toc2952701)
+---
+template: PP_Def
+subject: What is a Parenting Plan?
+content: |
+  A written agreement between parents that outlines the care arrangements for their child/ren, including residence, visitation, schedules, communication methods, responsibilities, and conflict resolution. 
+  
+  It can be registered with a court under [section 63E](https://www.legislation.gov.au/Details/C2019C00101/Html/Volume_1#_Toc2952701)
+  
+  Unlike a parenting order, it is a voluntary agreement made by the parents and not a court-issued order.
+
+---
+template: FLA_Def
+subject: What is the Family Law Act?
+content: |
+  The Family Law Act 1975 (Cth) is Australia’s federal legislation (law) that deals with family-related legal issues. They cover topics such as child custody, child support, divorce, parenting arrangements, property settlements, and more. This is a federal law that applies to the entire continent of Australia – all States and Territories and are enforced by family courts (Family Law Act 1975 (Cth)). 
+---
+template: FO_Def
+subject: What is a Financial Order?
+content: |
+  A financial order is a court order setting out how property and other financial resources and assets are to be divided and allocated between the parties in dispute. This is a legal agreement outlining the financial entitlements and obligations for each party. The courts must, when making a financial order, consider the financial contributions of each party to the relationship, their individual future needs, and the welfare of children if they are present.
+  A financial order is a legal order issued by courts – different from “financial agreements” which are agreements made by parties without court orders (Family Law Act 1975 (Cth) Part VIII).
+---
+template: MED_Def
+subject: What is Mediation?
+content: |
+  Mediation is a form of dispute resolution where the parties of a dispute (usually two) come together to resolve issues umpired by a neutral third party. The neutral third party is called a “mediator” whose role is to help the parties in dispute reach a mutually acceptable agreement (Australian Government Attorney-General's Department, Family Law Handbook 2020, ch 4.6 "Negotiation, Mediation and Alternative Dispute Resolution"). 
+---
+template: AFF_Def
+subject: What is an Affidavit?
+content: |
+  An affidavit is a written statement of facts that is confirmed by a sworn oath or affirmed to be true by the person giving the statement. They can be used in a court of law as evidence (Australian Government Attorney-General's Department, Family Law Handbook 2020, ch 5.4 "Affidavits").
+---
+template: BCSA_Def
+subject: What is a Binding Financial Support Agreement?
+content: |
+  A child support agreement sets out how parents will financially support their child after a separation/divorce. It covers various areas of expenses such as education, housing, medical, and general living expenses, and more.
+  A binding child support agreement is a written and signed agreement made between parents after each party has received individual legal advice. The lawyers of the respective parties must attach a Certificate of Independent Legal Advice to the binding child support agreement document proving that they received individual legal advice. Both parties must receive legal advice from two separate lawyers (Australian Government Attorney-General's Department, Family Law Handbook 2020, ch 4.8 "Binding Child Support Agreements").
+---
+template: DFR_Def
+subject: WHat is a De-Facto Relationship?
+content: |
+  Where two people who are not legally married and are not related by family, live together as a couple on a legitimate domestic basis. Certain considerations are taken into account to determine the existence of a de facto relationship: duration of the relationship, the extent and nature of their common residence, whether a sexual relationship exists, and more. A de facto relationship can exist between people of different sexes or of the same sex, and a person whose legally married or in another de facto relationship can still be a party (Family Law Act 1975 (Cth) s 4AA).
+---
+template: FA_Def
+subject: What is a financial agreement?
+content: |
+  A financial agreement is a mutually accepted agreement setting out how property and other financial resources and assets are to be divided and allocated between the parties in dispute. This is a legal agreement outlining the financial entitlements and obligations for each party. It can also cover areas of spousal maintenance and other financial matters.
+  Important to consider that “financial agreements” differ from “financial orders” which are legal orders issued by court. Financial agreements are agreements by parties without court orders (Family Law Act 1975 (Cth) s 90B).
+---
+template: CUS_Def
+subject: What does Custody mean?
+content: |
+  The term “custody” is not a commonly used terminology in Australia family law. Rather, the concept “parental responsibility” is more often referred to. It is used to refer to the legal authority and responsibility for a parent to make decisions regarding the child’s care,  development, and welfare. Parental responsibility includes making decisions regarding the child’s health, education, religion, and more. Parents are usually given equal parental responsibilities unless it is contrary to the child’s best interests (Family Law Act 1975 (Cth), s 61B-61C).
+---
+template: NEG_Def
+subject: What is Negotiation?
+content: |
+  In the context of family law, negotiation refers to a process of communication between parties where they aim to reach a settlement agreement on matters such as child custody, property/asset division, and more, all without the involvement of court proceedings (Australian Government Attorney-General's Department, Family Law Handbook 2020, ch 4.6 "Negotiation").
+
+---
+template: APP_Def
+subject: Who is an applicant?
+content: |
+  Under the Family Law Act, an applicant is a person who initiates a proceeding. Proceedings include: filing for divorce, an application to court under the Family Law Act, and other family-related matters (Family Law Act 1975 (Cth) s 4(1)(Interpretation of “applicant”)). 
+---
+template: CS_Def
+subject: What is Child Support
+content: |
+  Child support is a legal obligation of a parent/s financially contribution to a child’s upbringing. This can be for the purposes of providing financial support for the child’s clothing, education, healthcare, and others. When determining child support, the court takes into consideration factors such as the income of the parent to then make a decision on what amount is payable (Australian Government Attorney-General's Department, Family Law Handbook 2020, ch 4.5 "Child Support")
+---
+template: CA_Def
+subject: What is Contravnetion application?
+content: |
+  Contravention application is a legal application made to the court suggesting a party has breached their court order. This is a great way to hold the breaching party accountable and to request to the court to take appropriate measures to remedy the breach (Australian Government Attorney-General's Department, Family Law Handbook 2020, ch 5.9 "Contravention of orders and non-compliance with obligations").
+---
+template: DO_Def
+subject: What is a divorce order?
+content: |
+  A divorce order is a legally enforceable court order that officially ends a marriage. The legal document will detail the terms of the divorce settlement, with matters such as child custody/support, and property division outlined (Family Law Act 1975 (Cth) Part VI)/ 
+---
+template: FLC_Def
+subject: WHat is the Family Law Court
+content: |
+  The Family Court of Australia is a court that specialises in family-related matters such as adoption, child custody/support, divorce, and more. The judicial body has the authority to make decisions that can impact individuals’ rights and obligations as it relates to family law (Family Court of Australia, ‘About the Family Court of Australia’ https://www.familycourt.gov.au/about/ accessed 30 April 2023). 
+---
+template: ICL_Def
+subject: What is an Independant Childrens Lawyer>
+content: |
+  An independent children’s lawyer is a lawyer appointed by the court to represent the interests of a child in a family law proceeding. They are appointed especially where the child’s best interest is the paramount consideration. A court may issue an independent representation of a child’s interests by a lawyer when it is a necessity, on application from the child, or on application from another person concerned with the welfare of the child. The lawyer must consider the child’s age, maturity, and circumstances when progressing with the proceedingtc (Family Law Act 1975 (Cth) s 68L)
+---
+template: RES_Def
+subject: Whois a Respondent?
+content: |
+  In family law, a respondent is the party whom the legal action is brought against on application from another party. The term “respondent” is typically used for situations for child custody disputes, divorce, and property settlement proceedings. The respondent is usually given appropriate notice of the legal action brought and is then given the opportunity to respond and to defend themselves against such claims (Australian Government Attorney-General's Department, Family Law Handbook 2020, ch 3.6 "Service of Documents"). 
+---
+template: CLI_Def
+subject: Who is a Client?
+content: |
+  A client is an individual who seeks legal advice/services from lawyers to represent them in a legal matter. Clients in family law may include those dealing with child custody/support issues, divorce, and more. The lawyers are to act in the client’s best interests and to provide them with diligent and competent legal service (Australian Government Attorney-General's Department, Family Law Handbook 2020, ch 2.3 "Legal representation")
+---
+template: ADV_Def
+subject: Who is an advoate 
+content: |
+  In family law context, an advocate is a legal professional who represents clients in court and argues on their behalf (Australian Government Attorney-General's Department, Family Law Handbook 2020, ch 2.3 "Legal representation").
+---
+template: SUB_Def
+subject: Whay is a Subpena?
+content: |
+  A subpoena is a court order issuing a person to produce documents or to attend or provide evidence to court for a legal proceeding. As family law is concerned, a subpoena may be ordered by courts to obtain documents or information from third parties for purposes of family-related issues (e.g., may ask bank for financial information etc) (Australian Government Attorney-General's Department, Family Law Handbook 2020, ch 8.4 "Subpoenas"). 
+---
+template: CON_Def
+subject: What is Confiedentuality?
+content: |
+  Confidentiality is the protection of information between parties to a legal proceeding on sensitive issues such as personal details. When an information is confidential, they are not to be disclosed and are to be kept private unless given authorisation to do so (Australian Government Attorney-General's Department, Family Law Handbook 2020, ch 8.7 "Confidentiality").
+---
+template: PRAC_Def
+subject: What is a Practitioner?
+content: |
+  A practitioner is a professional who is authorised and qualified to practice law. They include solicitors and barristers (lawyers) (Family Court of Australia, 'Glossary', accessed April 30, 2023, https://www.familycourt.gov.au/wps/wcm/connect/fcoaweb/about/glossary/).
+---
+template: INT_Def
+subject: What is a Interim Order?
+content: |
+  An interim order is a temporary order made by court during the commencement of the proceedings and the final hearing. The aim of an interim order is to provide a temporary solution to the issue in hand until the final determination. They can be made on matters of various sorts such as child custody/support matters, divorces, and more (Australian Government Attorney-General's Department, Family Law Handbook 2020, ch 3.6 "Interim orders")
+---
+template: CF_Def
+subject: What are Court Fees?
+content: |
+  Court fees are the fees and costs charged by courts for the legal services provided. These services include filing an application, request for hearing, and obtaining copies of documents. The fees will vary depending on the nature and the circumstances (Australian Government Attorney-General's Department, Family Law Handbook 2020, ch 9.3 "Court Fees"). 
+---
+template: FDR_Def
+subject: What is Family Dispute Resolution?
+content: |
+  A family dispute resolution refers to another process other than court proceedings in which a family dispute resolution practitioner aids people in family disputes to come to a mutually acceptable agreement. The process may include helping people apply a parenting order. It is a requirement for parties of a family dispute to take honest and genuine measures to resolve their disputes through a family dispute resolution process before application to court for a parenting order, but there are exceptions that apply to this where there are family violence or child abuse (Family Law Act 1975 (Cth) s 10F).
+---
+template: Int_Def
+subject: What is a Interlocutory Order?
+content: |
+  An interlocutory order is a court order issued during the pending stages of an action, where the procedural and interim matters are delt with and does not finally dispose the case. In family law, they are usually issued to regulate the conduct of parties or to resolve urgent matters that arise during the course of the proceedings (Australian Government Attorney-General's Department, Family Law Handbook 2020, ch 6.6 "Interlocutory orders").
+---
+template: CC_Def
+subject: What is a COnciliation Conference?
+content: |
+  A conciliation conference is a process where an independent third party aids parties in disputes to reach a mutually acceptable agreement to resolve their dispute. This is often conducted in a more relaxing, non-threatening environment where the parties are to express any needs or concerns. The aim of a conciliation conference is to explore the options available and to talk out the disputes so that a resolution is made whereby the best interests of all parties are met (Australian Government Attorney-General's Department, Family Law Handbook 2020, ch 3.4 "Conciliation Conference").
+---
+template: App_Def
+subject: What is an Appeal?
+content: |
+  An appeal is the request by a party to a higher court to review and to reconsider the decision made by a lower court (Australian Government Attorney-General's Department, Family Law Handbook 2020, ch 9.2 "Appeals").
+---
+template: FR_Def
+subject: What is a Family Report?
+content: |
+  A family report is a written report prepared by a family consultant who provides the court with an assessment of the family and makes recommendations as to the parenting arrangements (Australian Government Attorney-General's Department, Family Law Handbook 2020, ch 4.8 "Family Reports").
+---
+template: CO_Def
+subject: What is a Consent Order?
+content: |
+  Consent orders are agreements between parties that are approved by a court. They are a legally binding and enforceable orders that can be made to resolve issues as it relates to parenting arrangements, financial settlements, and more (Australian Government Attorney-General's Department, Family Law Handbook 2020, ch 4.2 "Consent Orders"). 
+---
+template: ADR_Def
+subject: What is Alternative Dispute Resolution?
+content: |
+  Alternative dispute resolution is another process of resolving disputes other than court proceedings. This is where parties to a dispute try to reach a mutually acceptable agreement through negotiation, mediation, arbitration, or other methods. ADRs are a cost and time efficient alternative to court proceedings for parties to try and reach a resolution to their dispute (Australian Government Attorney-General's Department, Family Law Handbook 2020, ch 4.5 "Alternative Dispute Resolution").
+---
+template: Adj_Def
+subject: What does Adjourn mean?
+content: |
+  Adjourn is the process to which a court proceeding is either suspended or postponed until a later date. It is an official decision made by a judge to temporarily stop a court case. Adjournments can be granted for reasons such as giving parties time to gather further evidence (Australian Government Attorney-General's Department, Family Law Handbook 2020, ch 6.4 "Adjournment of hearings"). 
+---
+template: Disp_Def
+subject: What is a Dispute?
+content: |
+  A dispute refers to the disagreement or conflict between parties. In the context of family law, disputes may arise over matters such as child custody/support, property settlement, parental arrangements, and more (Australian Law Dictionary (4th ed, Oxford University Press, 2021) 122).
+---
+template: Int_Def
+subject: What is an Intervention?
+content: |
+  In the context of family law, intervention refers to where a third party joins a legal proceeding in order to provide information or to participate in the proceeding. The third party is known as an “intervener” who is not a party to the dispute but has an interest in the outcome of the case (Australian Government Attorney-General's Department, Family Law Handbook, 9th ed (2020) 41)
+
+---
+template: Spo_Def
+subject: What does Spouse mean?
+content: |
+  A spouse is someone who is either married, about to be married, or has been married to the other party. They can also include de facto partners who are either in the relationship, about to enter the relationship, or have ended a relationship with the other party (Family Law Act 1975 (Cth) s 4(1)(interpretation of “spouse party”)).
+---

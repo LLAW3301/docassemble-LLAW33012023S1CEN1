@@ -1,0 +1,15 @@
+---
+# Code does BFA branch 
+code: | 
+  if display_financial_order_faq == 'Where can I go to have a binding financial agreement drawn up?': 
+    FinFAQ3
+  if display_financial_order_faq == 'What are the different types of financial orders?': 
+    FinFAQ4
+---
+question: | 
+  What do you have questions about?
+field: display_financial_order_faq
+choices:
+  - Where can I go to have a binding financial agreement drawn up?
+  - What are the different types of financial orders?
+---

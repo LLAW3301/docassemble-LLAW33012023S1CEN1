@@ -1,0 +1,11 @@
+---
+event: Copy
+question: Where can I find a copy of our parenting order?
+subquestion: |
+  Court orders (except appeals) are signed and sealed electronically and available to download from the [*Commonwealth Courts Portal*](https://www.comcourts.gov.au/pip/saml/authn_request?SigAlg=http%3A%2F%2Fwww.w3.org%2F2000%2F09%2Fxmldsig%23rsa-sha1&SAMLRequest=eJyFkEFvgkAUhO%2F%2BCrJ3cF0gykY0tE1TE9sYxB56aZblYTeBXbpvMf35pVWTpgeZ65s3k2%2BW66%2B28U5gURmdkllAiQdamkrpY0oOxaO%2FIOuVd9ESRdt0POvdh87hswd03vCvkf8eUtJbzY1AhVyLFpA7yffZ85azgPLOGmekaYg38W5o85ASkNGsDuc0iVhZ00SIJFyIsiohiqhc1BDPGVBZJSNRr1cs9oN1uxWxh41GJ7Qb%2FJSFPo19Fhc05iziYfQ2ErC70N0pfd7u3xTB3ynKswn5U1Hs%2FBwqZUG68YaTqsC%2BDHEp6QSO%2BDNEsG7gvzca%2BxbsHuxJSTjk25RMEc20MUel34VEMl1NvgHzyYZP&Signature=GNmkuBUNMUtpNwOoH%2B8WE62%2BuvpkfXXxPTxHHbnvh57YOytvRCOa%2FjAnfp27%0AJUCet%2FVQdY7bHj5TsrGqTobC4A%3D%3D%0A&ByName=pas)
+
+  Find more details for the Portal [*here*](https://www.fcfcoa.gov.au/hdi/access-my-orders)
+buttons: 
+  - Restart: restart
+  - Exit: exit
+---

@@ -1,0 +1,11 @@
+---
+event: Childsupport
+question: What do I do if the other parent isn’t making the child-support payments ordered by the court?
+subquestion: |
+  Seek legal advice and contact [*Child Support Services*]( https://www.servicesaustralia.gov.au/contact-child-support?context=64107)
+   
+   A child support debt will accumulate. 
+buttons: 
+  - Restart: restart
+  - Exit: exit
+---
