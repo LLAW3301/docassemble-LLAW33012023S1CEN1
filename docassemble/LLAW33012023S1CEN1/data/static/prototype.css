@@ -30,12 +30,12 @@
        for any colour you pick
     */
     /* background-color: rgb(255,211,0) !important; */
-    background-color: rgb(69, 175, 196) !important;
+    background-color: rgb(55.69,82,98.8) !important;
 }
 
 /* This sets the colour of the 'Source' link in the navbar */
 .navbar .nav-item a{
-    color: rgb(0,0,0) !important;
+    color: rgb(2.4,57.6,8.9) !important;
 }
 
 /* dropdown-menu manages the right-hand menu (where we access the Playground
@@ -46,7 +46,7 @@
         'alpha' or transaparency value.  Here we are saying
         to set the transparency to 30%
     */
-    background-color: rgba(255,211,0,0.3);
+    background-color: rgba(2.4,57.6,8.9);
 }
 /* Sets properties for when hovering over a menu item in the 
    drop-down menu */
@@ -65,7 +65,7 @@
 }
 /* ...and when hovering over it */
 .btn-primary:hover{
-  color: rgb(0,0,0);
+  color: rgb(2.4,57.6,8.9);
   /* background-color: rgba(0,71,171,0.3); */
   background-color: rgba(151,201,255,0.3);
   border-color: rgb(0,0,0);

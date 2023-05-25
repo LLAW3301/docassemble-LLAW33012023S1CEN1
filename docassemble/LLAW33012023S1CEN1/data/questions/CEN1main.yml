@@ -1,13 +1,13 @@
 ---
 include:
-  - Glossary.yml
-  - FAQanswerscode.yml
+  - CEN1FAQ_Fin.yml
+  - CEN1FAQ_fin_flow.yml
   - CEN1FAQ_Flow.yml
   - CEN1Other_FAQ.yml
-  - CEN1FAQ_fin_flow.yml
-  - CEN1FAQ_Fin.yml
-  - display_financial_order_faq.yml
   - display_bfa_faqs.yml
+  - display_financial_order_faq.yml
+  - FAQanswerscode.yml
+  - Glossary.yml
   - Images.yml
 ---
 features:
@@ -20,8 +20,8 @@ features:
 # Setting the standard text to be applied through co-parent connect, through the css prototype file. In addition this sets the colour and colour transitions of all buttons on co-parent connect. All colours and buttons are based off the same text and colours and button behaviour found on the Centacare website
 ---
   # sets the logo for Co-Parent Connect with reference to the png file in the static files.
-  # objects:
-  #  - BTlogo: DAStaticFile.using(filename='ADD LOGO PNG HERE’)
+objects:
+  - BTlogo: DAStaticFile.using(filename='Logo’)
   #---
   #mandatory: True
   #code: |
