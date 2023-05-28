@@ -44,6 +44,8 @@ subquestion: |
  *This app does not provide legal advice. If you need legal advice, please speak to a lawyer.*
  
   This app provides a platform to answer your legal questions and help facilitate easy communication with co-parents. 
+  
+    [View privacy policy here](https://centacare.org.au/wp-content/uploads/legal/Centacare-Privacy-Policy.pdf)
 buttons: 
   - Continue: continue 
   - Exit: exit
@@ -105,7 +107,7 @@ code: |
         else:
           if want_financial_order:
             branch_fin_yyy 
-            display_faq_screen
+            display_faq-screen
           else:
             if question_legal_term:
               other_branch_legal_term
@@ -135,13 +137,13 @@ code: |
 --- 
  # These are the initial questions that will ensure the user is eligible to move forward with the app. If the user is not, it will take them to the contact centacare screen as the app will be unable to answer their questions. 
 question: |
-  Please provide the following information  <i class="fa-solid fa-heart-crack"></i>
+  <i class="fa-solid fa-heart-crack"></i> Please provide the following information <i class="fa-solid fa-heart-crack"></i>
 fields:
   - "Are you separated or divorced already?": already_separated
     datatype: yesnoradio
 ---
 question: |
-  Please provide the following information  <i class="fa-solid fa-heart-crack"></i>
+  <i class="fa-solid fa-heart-crack"></i> Please provide the following information <i class="fa-solid fa-heart-crack"></i>
 fields:
   - "Are you currently separating or divorcing?": currently_separating
     datatype: yesnoradio
