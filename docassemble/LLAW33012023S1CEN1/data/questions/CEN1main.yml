@@ -21,21 +21,21 @@ features:
 ---
   # sets the logo for Co-Parent Connect with reference to the png file in the static files.
 objects:
-  - BTlogo: DAStaticFile.using(filename='Logo’)
-  #---
-  #mandatory: True
-  #code: |
-  #  set_parts(logo='<img src="' + BTlogo.url_for() + '" style="height: 78px; alt=''">')
-  #---
-  #metadata:
-  #  title: |
-  #    Co-Parent Connect
-  #  description: |
-  #    A Guide for people seeking advice as they go through seperation or divorce.
-  #  authors:
-  #- name: Matilda Bartlett, Madison Millward, Danielle Ghinis, Jacinta Best, Isabella Mulholland,       # Jiyoon Kim
-  #      organization: Flinders University
-  #  revision_date: 2023-06-01
+  - BTlogo: DAStaticFile.using(filename='Logo.png')
+---
+mandatory: True
+code: |
+  set_parts(logo='<img src="' + BTlogo.url_for() + '" style="height: 78px; alt=''">')
+---
+metadata:
+  title: |
+    Co-Parent Connect
+  description: |
+    A Guide for people seeking advice as they go through seperation or divorce.
+  authors:
+    - name: Matilda Bartlett, Madison Millward, Danielle Ghinis, Jacinta Best, Isabella Mulholland,       Jiyoon Kim
+      organization: Flinders University
+  revision_date: 2023-06-01
 ---
 # This is our welcome screen
 mandatory: True
