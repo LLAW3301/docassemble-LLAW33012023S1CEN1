@@ -1,6 +1,6 @@
 ---
 question: | 
-  What do you have questions about?
+  <i class="fa-sharp fa-solid fa-magnifying-glass-dollar"></i> What do you have questions about? <i class="fa-sharp fa-solid fa-magnifying-glass-dollar"></i>
 field: display_bfa_faqs
 choices:
   - Where can I find a copy of our financial agreement? 

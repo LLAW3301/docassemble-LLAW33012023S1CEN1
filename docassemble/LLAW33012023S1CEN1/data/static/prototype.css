@@ -33,6 +33,10 @@
     background-color: rgb(21,141,167) !important;
 }
 
+/* adjusting navbar height */
+.da-pad-for-navbar         { padding-top: 150px; }
+.da-top-for-navbar         { top: 150px;         }
+
 /* This sets the colour of the 'Source' link in the navbar */
 .navbar .nav-item a{
     color: rgb(21,141,167) !important;
@@ -115,4 +119,10 @@
     /* Add a text shadow */
     /* check out text shadows here: https://cssreference.io/property/text-shadow/ */
     text-shadow: 2px 4px 10px tomato;
+}
+
+/* font colours and style */
+.row {
+  color: rgb(0,0,0);
+  font-family: Georgia
 }

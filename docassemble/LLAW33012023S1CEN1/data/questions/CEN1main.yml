@@ -9,6 +9,7 @@ include:
   - FAQanswerscode.yml
   - Glossary.yml
   - Images.yml
+  - cen1autoterms.yml
 ---
 features:
   css: prototype.css
@@ -39,7 +40,7 @@ metadata:
 ---
 # This is our welcome screen
 mandatory: True
-question: Welcome to *Co-Parent Connect* 
+question: Welcome to <i class="fa-solid fa-people-roof"></i> **Co-Parent Connect** <i class="fa-solid fa-people-roof"></i> 
 subquestion: |
  *This app does not provide legal advice. If you need legal advice, please speak to a lawyer.*
  
@@ -135,19 +136,19 @@ code: |
 --- 
  # These are the initial questions that will ensure the user is eligible to move forward with the app. If the user is not, it will take them to the contact centacare screen as the app will be unable to answer their questions. 
 question: |
-  Please provide the following information
+  <i class="fa-solid fa-heart-crack"></i> Please provide the following information <i class="fa-solid fa-heart-crack"></i>
 fields:
   - "Are you separated or divorced already?": already_separated
     datatype: yesnoradio
 ---
 question: |
-  Please provide the following information
+  <i class="fa-solid fa-heart-crack"></i> Please provide the following information <i class="fa-solid fa-heart-crack"></i>
 fields:
   - "Are you currently separating or divorcing?": currently_separating
     datatype: yesnoradio
 ---
   # This is the main slection screen where the user can choose what their matter is related to. 
-question: Co-Parent Connect
+question: <i class="fa-solid fa-people-roof"></i> **Co-Parent Connect** <i class="fa-solid fa-people-roof"></i>
 subquestion: |
   Does your matter relate to children or financial matters?
 field: children_fin
@@ -157,7 +158,7 @@ choices:
   - Other
 ---
 # From here down are the codes for the questions that will be asked depending on what option the user selects. 
-question: Co-Parent Connect
+question: <i class="fa-solid fa-people-roof"></i> **Co-Parent Connect** <i class="fa-solid fa-people-roof"></i>
 subquestion: |
   Is there an agreement in place?
 fields:
@@ -167,7 +168,7 @@ fields:
         - Yes
         - No
 ---
-question: Co-Parent Connect
+question: <i class="fa-solid fa-people-roof"></i> **Co-Parent Connect** <i class="fa-solid fa-people-roof"></i>
 subquestion: |
   Do you have issues or questions about a parenting agreement?
 fields:
@@ -177,7 +178,7 @@ fields:
         - Yes
         - No
 ---
-question: Co-Parent Connect
+question: <i class="fa-solid fa-people-roof"></i> **Co-Parent Connect** <i class="fa-solid fa-people-roof"></i>
 subquestion: |
   If you don't have issues or questions about a parenting agreement, do you want one drawn up?
 fields:
@@ -187,7 +188,7 @@ fields:
         - Yes
         - No
 ---
-question: Co-Parent Connect
+question: <i class="fa-solid fa-people-roof"></i> **Co-Parent Connect** <i class="fa-solid fa-people-roof"></i>
 subquestion: |
   Do you have questions about your rights as a parent sharing custody?
 fields:
@@ -210,7 +211,7 @@ choices:
 # They need to display the questions for each branch of the flowchart
 # Set the field to an equivalent of FAQ_child_XXX (where XXX is the branch of your flowchart)
 question: | 
-  What do you have questions about?
+  <i class="fa-sharp fa-solid fa-children"></i> What do you have questions about? <i class="fa-sharp fa-solid fa-children"></i>
 field: FAQ_child_YYY
 choices:
   - Can I change our parenting plan if I need the kids for an important event/occasion?
@@ -229,7 +230,7 @@ choices:
 # So that's 8 in total - so this is number 2
 # They need to display the questions for each branch of the flowchart
 question: | 
-  What do you have questions about?
+  <i class="fa-sharp fa-solid fa-children"></i> What do you have questions about? <i class="fa-sharp fa-solid fa-children"></i>
 field: FAQ_child_YYN
 choices:
   - Can I change our parenting plan if I need the kids for an important event/occasion?
@@ -246,7 +247,7 @@ choices:
 # So that's 8 in total - so this is number 3
 # They need to display the questions for each branch of the flowchart
 question: | 
-  What do you have questions about?
+  <i class="fa-sharp fa-solid fa-children"></i> What do you have questions about? <i class="fa-sharp fa-solid fa-children"></i>
 field: FAQ_child_NYY
 choices:
   - Where can I find my rights as a parent sharing custody?
@@ -261,7 +262,7 @@ choices:
 # So that's 8 in total - so this is number 4
 # They need to display the questions for each branch of the flowchart
 question: | 
-  What do you have questions about?
+  <i class="fa-sharp fa-solid fa-children"></i> What do you have questions about? <i class="fa-sharp fa-solid fa-children"></i>
 field: FAQ_child_NYN
 choices:
   - Can our child(ren) have a say in where they stay?
@@ -272,7 +273,7 @@ choices:
 # So that's 8 in total - so this is number 5
 # They need to display the questions for each branch of the flowchart
 question: | 
-  What do you have questions about?
+  <i class="fa-sharp fa-solid fa-children"></i> What do you have questions about? <i class="fa-sharp fa-solid fa-children"></i>
 field: FAQ_child_NNY
 choices:
   - Where can I find my rights as a parent sharing custody?
@@ -281,7 +282,7 @@ choices:
 # So that's 8 in total - so this is number 6
 # They need to display the questions for each branch of the flowchart
 question: | 
-  What do you have questions about?
+  <i class="fa-sharp fa-solid fa-children"></i> What do you have questions about? <i class="fa-sharp fa-solid fa-children"></i>
 field: FAQ_child_YNY
 choices:
   - Where can I find my rights as a parent sharing custody?
@@ -290,47 +291,47 @@ choices:
 ---
 # Here are more questions for if the user selects they have a financial related question. 
 question: |
-  Please provide the following information
+  <i class="fa-sharp fa-solid fa-person-circle-question"></i> Please provide the following information <i class="fa-sharp fa-solid fa-person-circle-question"></i>
 fields:
   - "Do you have a BFA?": has_bfa
     datatype: yesnoradio
 ---
 question: |
-  Please provide the following information
+  <i class="fa-sharp fa-solid fa-person-circle-question"></i> Please provide the following information <i class="fa-sharp fa-solid fa-person-circle-question"></i>
 fields:
   - "Are any orders in place?": orders_in_place
     datatype: yesnoradio
 ---
 question: |
-  Please provide the following information
+  <i class="fa-sharp fa-solid fa-person-circle-question"></i> Please provide the following information <i class="fa-sharp fa-solid fa-person-circle-question"></i>
 fields:
   - "Are you wanting some type of financial order drawn up?": want_financial_order
     datatype: yesnoradio
 ---
 # This is the question for if they want to know about a legal term, in which case it will take them to the glossary.
 question: |
-  Please provide the following information
+  <i class="fa-sharp fa-solid fa-person-circle-question"></i> Please provide the following information <i class="fa-sharp fa-solid fa-person-circle-question"></i>
 fields:
   - "Do you have a question about a particular legal term?": question_legal_term
     datatype: yesnoradio
 ---
 # This is for if they don't have a question related to the three options but have a question about their legal rights.
 question: |
-  Please provide the following information
+  <i class="fa-sharp fa-solid fa-person-circle-question"></i> Please provide the following information <i class="fa-sharp fa-solid fa-person-circle-question"></i>
 fields:
   - "Do you have a question about your legal rights?": question_legal_rights
     datatype: yesnoradio
 ---
 # This is for if they don't have a question related to the three options but have a question about legal documents. 
 question: |
-  Please provide the following information
+  <i class="fa-sharp fa-solid fa-person-circle-question"></i> Please provide the following information <i class="fa-sharp fa-solid fa-person-circle-question"></i>
 fields:
   - "Do you have a question about legal documentation?": question_legal_docs
     datatype: yesnoradio
 ---
 # This is for if they don't have a question related to the three options but have a question about safety. 
 question: |
-  Please provide the following information
+  <i class="fa-sharp fa-solid fa-person-circle-question"></i> Please provide the following information <i class="fa-sharp fa-solid fa-person-circle-question"></i>
 fields:
   - "Do you have a question about your safety?": question_safety
     datatype: yesnoradio
@@ -415,9 +416,13 @@ buttons:
 ---
 # Here is where the user is taken if they have a question or concern about their safety. 
 event: Safetyconcern_screen
-question: I have a question/concern about safety
+question: <i class="fa-solid fa-user-shield"></i> I have a question/concern about safety <i class="fa-solid fa-user-shield"></i>
 subquestion: |
-  If there are Court orders in place, do not go against these orders without real grounds that any party’s (child/parent/etc) health and/or safety is in jeopardy. Seek legal advice on your individual situation; if you breach your parenting order without real grounds, you may be punished by the court.
+
+  If there are Court orders in place, do not go against these orders without real grounds that any party’s (child/parent/etc) health and/or safety is in jeopardy. 
+  
+  Seek legal advice on your individual situation; if you breach your parenting order without real grounds, you may be punished by the court.
+  
   If there are no Court orders in place, ensure your child is in a safe environment, and then seek legal advice regarding your situation. 
 buttons: 
   - Restart: restart
@@ -426,9 +431,14 @@ buttons:
 ---
 # Here is where the user is taken if they have a question about their legal rights. 
 event: Rightasparent_screen
-question: I would like to learn about my legal rights
+question: <i class="fa-solid fa-scale-unbalanced-flip"></i> I would like to learn about my legal rights <i class="fa-solid fa-scale-unbalanced-flip"></i>
 subquestion: |
-  The Family Law Act 1975 is the authority on rights involving parenting disputes and resolutions. The Federal Circuit and Family Court of Australia has an informative website. For detailed advice specific to your situation, speak to your lawyer.
+
+  The Family Law Act 1975 is the authority on rights involving parenting disputes and resolutions. 
+  
+  The Federal Circuit and Family Court of Australia has an informative [website](https://www.fcfcoa.gov.au/)
+  
+  For detailed advice specific to your situation, speak to your lawyer.
 buttons: 
   - Restart: restart
   - Exit: exit
@@ -436,9 +446,14 @@ buttons:
 ---
 # Here is where the user is taken if they have a question about a legal document.
 event: Legaldocument_screen
-question: I have a question about a legal document
+question: <i class="fa-solid fa-file-contract"></i> I have a question about a legal document <i class="fa-solid fa-file-contract"></i>
 subquestion: |
-  The Family Law Act 1975 is the authority on rights involving parenting disputes and resolutions. The Federal Circuit and Family Court of Australia has an informative website. For detailed advice specific to your situation, speak to your lawyer.
+
+  The Family Law Act 1975 is the authority on rights involving parenting disputes and resolutions. 
+  
+  The Federal Circuit and Family Court of Australia has an informative [website](https://www.fcfcoa.gov.au/)
+  
+  For detailed advice specific to your situation, speak to your lawyer.
 buttons: 
   - Restart: restart
   - Exit: exit
@@ -446,19 +461,18 @@ buttons:
 ---
 # This is the contact Centacare screen
 event: contact_screen
-question: It seems like you need further assistance, you can contact Centacare using the details below. 
+question: <i class="fa-solid fa-triangle-exclamation"></i> It seems like you need further assistance <i class="fa-solid fa-triangle-exclamation"></i> 
 subquestion: |
 
   
-  Alternatively select exit to be taken to the website.
+  Select exit to be taken to the Centacare Website.
   
-  Thank you for using our application.
   
-  Address: 45 Wakefield Street Adelaide SA 5000
+  <i class="fa-solid fa-house"></i> Address: 45 Wakefield Street Adelaide SA 5000
   
-  Phone:  08 8215 6700
+  <i class="fa-sharp fa-solid fa-phone-volume"></i> Phone:  08 8215 6700
   
-  Email: enquiries@centacare.org.au
+  <i class="fa-solid fa-square-envelope"></i> Email: enquiries@centacare.org.au
 buttons: 
   - Restart: restart
   - Exit: exit
@@ -466,26 +480,25 @@ buttons:
 ---
 # This is the contact Centacare CHILD screen
 event: child_end_contact_screen
-question: It seems like you need further assistance
+question: <i class="fa-solid fa-triangle-exclamation"></i> It seems like you need further assistance <i class="fa-solid fa-triangle-exclamation"></i>
 subquestion: |
 
   
-  Select exit to be taken to the website.
+  Select exit to be taken to the Centacare Website.
   
-  Access Centacares services using the information below;
   
-  Address: 45 Wakefield Street Adelaide SA 5000
+  <i class="fa-solid fa-house"></i> Address: 45 Wakefield Street Adelaide SA 5000
   
-  Phone:  08 8215 6700
+  <i class="fa-sharp fa-solid fa-phone-volume"></i> Phone:  08 8215 6700
   
-  Email: enquiries@centacare.org.au
+  <i class="fa-solid fa-square-envelope"></i> Email: enquiries@centacare.org.au
 buttons: 
   - Restart: restart
   - Exit: exit
     url: https://centacare.org.au/
 ---
 event: display_faq_screen
-question: Co-Parent Connect
+question: <i class="fa-solid fa-people-roof"></i> **Co-Parent Connect** <i class="fa-solid fa-people-roof"></i>
 subquestion: |
   
   ### ${display_template.subject}
@@ -495,7 +508,6 @@ buttons:
   - Exit: exit
     url: https://centacare.org.au/
   - Restart: restart
----
 ---
 # Establishes that the Flinders accreditation is displayed on every single page of Co-Parent Connect, and that the application was created in colaboration with Centacare.
 default screen parts:
