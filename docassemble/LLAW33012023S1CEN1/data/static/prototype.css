@@ -30,12 +30,12 @@
        for any colour you pick
     */
     /* background-color: rgb(255,211,0) !important; */
-    background-color: rgb(55.69,82,98.8) !important;
+    background-color: rgb(21,141,167) !important;
 }
 
 /* This sets the colour of the 'Source' link in the navbar */
 .navbar .nav-item a{
-    color: rgb(2.4,57.6,8.9) !important;
+    color: rgb(21,141,167) !important;
 }
 
 /* dropdown-menu manages the right-hand menu (where we access the Playground
