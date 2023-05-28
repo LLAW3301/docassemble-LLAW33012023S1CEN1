@@ -18,7 +18,7 @@ features:
   navigation: True
   go full screen: True
 ---
-# Setting the standard text to be applied through co-parent connect, through the css prototype file. In addition this sets the colour and colour transitions of all buttons on co-parent connect. All colours and buttons are based off the same text and colours and button behaviour found on the Centacare website
+# Setting the standard text to be applied through co-parent connect, through the css prototype file. In addition this sets the colour and colour transitions of all buttons on co-parent connect. All colours and buttons are based off the same text and colours and button behaviour found on the Centacare website.
 ---
   # sets the logo for Co-Parent Connect with reference to the png file in the static files.
 objects:
