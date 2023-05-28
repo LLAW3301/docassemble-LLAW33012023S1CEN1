@@ -12,7 +12,7 @@ include:
 ---
 features:
   css: prototype.css
-  debug: False
+  debug: True
   hide standard menu: True
   navigation: True
   go full screen: True
@@ -101,19 +101,19 @@ code: |
         branch_fin_y
         display_faq_screen
       else:
-        if orders_in_place:
-          branch_fin_yy
-          display_faq_screen
-        else:
-          if want_financial_order:
-            branch_fin_yyy 
-            display_faq-screen
-          else:
+        if not orders_in_place:
+          if not want_financial_order:
             if question_legal_term:
               other_branch_legal_term
               display_faq_screen
             else:
               contact_screen
+          else:
+            branch_fin_yy
+            display_faq_screen  
+        else:
+          branch_fin_yyy
+          display_faq_screen
     elif children_fin == 'Other':
       if question_legal_term:
         other_branch_legal_term
