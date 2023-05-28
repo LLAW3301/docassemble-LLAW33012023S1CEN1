@@ -21,7 +21,7 @@ features:
 ---
   # sets the logo for Co-Parent Connect with reference to the png file in the static files.
 objects:
-  - BTlogo: DAStaticFile.using(filename='Logo.png')
+  - BTlogo: DAStaticFile.using(filename='centacareLogo.png')
 ---
 mandatory: True
 code: |
@@ -466,13 +466,13 @@ buttons:
 ---
 # This is the contact Centacare CHILD screen
 event: child_end_contact_screen
-question: It seems like you need further assistance, you can contact Centacare using the details below. 
+question: It seems like you need further assistance
 subquestion: |
 
   
-  Alternatively select exit to be taken to the website.
+  Select exit to be taken to the website.
   
-  Thank you for using our application.
+  Access Centacares services using the information below;
   
   Address: 45 Wakefield Street Adelaide SA 5000
   
