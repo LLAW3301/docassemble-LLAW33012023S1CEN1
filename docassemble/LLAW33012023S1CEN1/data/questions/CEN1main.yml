@@ -9,7 +9,6 @@ include:
   - FAQanswerscode.yml
   - Glossary.yml
   - Images.yml
-  - cen1autoterms.yml
 ---
 features:
   css: prototype.css
@@ -26,7 +25,7 @@ objects:
 ---
 mandatory: True
 code: |
-  set_parts(logo='<img src="' + BTlogo.url_for() + '" style="height: 78px; alt=''">')
+  set_parts(logo='<img src="' + BTlogo.url_for() + '" style="height: 78px; alt=' '">')
 ---
 metadata:
   title: |
@@ -136,13 +135,13 @@ code: |
 --- 
  # These are the initial questions that will ensure the user is eligible to move forward with the app. If the user is not, it will take them to the contact centacare screen as the app will be unable to answer their questions. 
 question: |
-  <i class="fa-solid fa-heart-crack"></i> Please provide the following information <i class="fa-solid fa-heart-crack"></i>
+  Please provide the following information  <i class="fa-solid fa-heart-crack"></i>
 fields:
   - "Are you separated or divorced already?": already_separated
     datatype: yesnoradio
 ---
 question: |
-  <i class="fa-solid fa-heart-crack"></i> Please provide the following information <i class="fa-solid fa-heart-crack"></i>
+  Please provide the following information  <i class="fa-solid fa-heart-crack"></i>
 fields:
   - "Are you currently separating or divorcing?": currently_separating
     datatype: yesnoradio
@@ -339,7 +338,8 @@ fields:
 # Here is the code for the glossary. Each line has 'image' inserted in to make the app more visual and easy to understand. This creates simple buttons for the user to take them to each defintition.
 css class: GlossaryButtonHeader
 question: | 
-   What legal term would you like to know about?
+   <i class="fa-solid fa-list"></i> What legal term would you like defined? <i class="fa-solid fa-list"></i>
+
 field: FAQ_other_y
 buttons:
   - "Adjourn": Adjourn
@@ -434,9 +434,9 @@ event: Rightasparent_screen
 question: <i class="fa-solid fa-scale-unbalanced-flip"></i> I would like to learn about my legal rights <i class="fa-solid fa-scale-unbalanced-flip"></i>
 subquestion: |
 
-  The Family Law Act 1975 is the authority on rights involving parenting disputes and resolutions. 
+  The *Family Law Act 1975 (Cth)* is the authority on rights involving parenting disputes and resolutions. 
   
-  The Federal Circuit and Family Court of Australia has an informative [website](https://www.fcfcoa.gov.au/)
+  The Federal Circuit and Family Court of Australia has an informative [website](https://www.fcfcoa.gov.au/fl)
   
   For detailed advice specific to your situation, speak to your lawyer.
 buttons: 
@@ -448,10 +448,10 @@ buttons:
 event: Legaldocument_screen
 question: <i class="fa-solid fa-file-contract"></i> I have a question about a legal document <i class="fa-solid fa-file-contract"></i>
 subquestion: |
-
-  The Family Law Act 1975 is the authority on rights involving parenting disputes and resolutions. 
   
-  The Federal Circuit and Family Court of Australia has an informative [website](https://www.fcfcoa.gov.au/)
+  The *Family Law Act 1975 (Cth)* is the authority on rights involving parenting disputes and resolutions. 
+  
+  The Federal Circuit and Family Court of Australia has an informative [website](https://www.fcfcoa.gov.au/fl)
   
   For detailed advice specific to your situation, speak to your lawyer.
 buttons: 
