@@ -12,7 +12,7 @@ include:
 ---
 features:
   css: prototype.css
-  debug: True
+  debug: False
   hide standard menu: True
   navigation: True
   go full screen: True
@@ -294,7 +294,7 @@ choices:
 question: |
   <i class="fa-sharp fa-solid fa-person-circle-question"></i> Please provide the following information <i class="fa-sharp fa-solid fa-person-circle-question"></i>
 fields:
-  - "Do you have a BFA?": has_bfa
+  - "Do you have a Binding Financial Agreement?": has_bfa
     datatype: yesnoradio
 ---
 question: |
