@@ -6,6 +6,13 @@ code: |
   if display_financial_order_faq == 'What are the different types of financial orders?': 
     FinFAQ4
 ---
+question: |
+    <i class="fa-sharp fa-solid fa-magnifying-glass-dollar"></i> What do you have questions about? <i class="fa-sharp fa-solid fa-magnifying-glass-dollar"></i>
+field: display_order_faq
+choices:
+  - Where can I find a copy of my order?
+  - What type of order do I have?
+---
 question: | 
   <i class="fa-sharp fa-solid fa-magnifying-glass-dollar"></i> What do you have questions about? <i class="fa-sharp fa-solid fa-magnifying-glass-dollar"></i>
 field: display_financial_order_faq

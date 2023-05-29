@@ -17,9 +17,9 @@ code: |
   branch_fin_yy = True
 ---
 code: | 
-  if display_financial_order_faq == 'Where can I find a copy of my order?':  
+  if display_order_faq == 'Where can I find a copy of my order?':  
     display_template = FinFAQ5
-  elif display_financial_order_faq == 'What type of order do I have?':
+  elif display_order_faq == 'What type of order do I have?':
     display_template = FinFAQ6
 
   branch_fin_yyy = True
