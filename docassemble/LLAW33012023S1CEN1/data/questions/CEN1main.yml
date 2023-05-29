@@ -41,11 +41,16 @@ metadata:
 mandatory: True
 question: Welcome to <i class="fa-solid fa-people-roof"></i> **Co-Parent Connect** <i class="fa-solid fa-people-roof"></i> 
 subquestion: |
- *This app does not provide legal advice. If you need legal advice, please speak to a lawyer.*
+
+  *This app does not provide legal advice. If you need legal advice, please speak to a lawyer.*
  
   This app provides a platform to answer your legal questions and help facilitate easy communication with co-parents. 
   
     [View privacy policy here](https://centacare.org.au/wp-content/uploads/legal/Centacare-Privacy-Policy.pdf)
+
+Right: |
+  [FILE Familypic.png, 300px]
+
 buttons: 
   - Continue: continue 
   - Exit: exit
@@ -475,6 +480,10 @@ subquestion: |
   <i class="fa-sharp fa-solid fa-phone-volume"></i> Phone:  08 8215 6700
   
   <i class="fa-solid fa-square-envelope"></i> Email: enquiries@centacare.org.au
+
+Right: |
+  [FILE Hands.png, 300px]
+
 buttons: 
   - Restart: restart
   - Exit: exit
@@ -494,6 +503,10 @@ subquestion: |
   <i class="fa-sharp fa-solid fa-phone-volume"></i> Phone:  08 8215 6700
   
   <i class="fa-solid fa-square-envelope"></i> Email: enquiries@centacare.org.au
+
+Right: |
+  [FILE Hands.png, 300px]
+
 buttons: 
   - Restart: restart
   - Exit: exit
