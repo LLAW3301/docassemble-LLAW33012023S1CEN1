@@ -9,6 +9,7 @@ include:
   - FAQanswerscode.yml
   - Glossary.yml
   - Images.yml
+  - autoterms.yml
 ---
 features:
   css: prototype.css
@@ -460,7 +461,7 @@ subquestion: |
   
   The Federal Circuit and Family Court of Australia has an informative [website](https://www.fcfcoa.gov.au/fl)
   
-  For detailed advice specific to your situation, speak to your lawyer.
+  If you have a question about a legal document, or need a copy of your legal documents, speak to your lawyer.
 buttons: 
   - Restart: restart
   - Exit: exit
