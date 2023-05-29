@@ -163,6 +163,8 @@ choices:
   - Children
   - Financial
   - Other
+Right: |
+  [FILE Divorce.png, 300px]
 ---
 # From here down are the codes for the questions that will be asked depending on what option the user selects. 
 question: <i class="fa-solid fa-people-roof"></i> **Co-Parent Connect** <i class="fa-solid fa-people-roof"></i>
@@ -355,72 +357,106 @@ buttons:
     color: info
   - "Advocate": Advocate
     image: Advocate
+    color: white
   - "Affidavit": Affidavit
     image: Affidavit
+    color: info
   - "Alternative Dispute Resolution": Alternative Dispute Resolution
     image: Alternative Dispute Resolution
+    color: white
   - "Appeal": Appeal
     image: Appeal
+    color: info
   - "Applicant": Applicant
     image: Applicant
+    color: white
   - "Child Support": Child Support
     image: Child Support
+    color: info
   - "Child Support Agreement": Child Support Agreement
     image: Child Support Agreement
+    color: white
   - "Client": Client
     image: Client
+    color: info
   - "Conciliation Conference": Conciliation Conference
     image: Conciliation Conference
+    color: white
   - "Confidentiality": Confidentiality
     image: Confidentiality 
+    color: info
   - "Contravention Application": Contravention Application
     image: Contravention Application
+    color: white
   - "Custody": Custody
     image: Custody
+    color: info
   - "Consent Order": Consent Order
     image: Consent Order
+    color: white
   - "Court Fees": Court Fees
     image: Court Fees
+    color: info
   - "De-Facto Relationship": De-Facto Relationship
     image: De-Facto Relationship
+    color: white
   - "Dispute": Dispute
     image: Dispute
+    color: info
   - "Divorce Order": Divorce Order
     image: Divorce Order
+    color: white
   - "Family Dispute Resolution": Family Dispute Resolution
     image: Family Dispute Resolution
+    color: info
   - "Family Law Court": Family Law Court
     image: Family Law Court
+    color: white
   - "Family Report": Family Report
     image: Family Report
+    color: info
   - "Financial Agreement": Financial Agreement
     image: Financial Agreement
+    color: white
   - "Financial Order": Financial Order
     image: Financial Order
+    color: info
   - "Independent Children's Lawyer": Independent Childrens Lawyer
     image: Independent Childrens Lawyer
+    color: white
   - "Interim Order": Interim Order
     image: Interim Order
+    color: info
   - "Interlocutory Order": Interlocutory Order
     image: Interlocutory Order
+    color: white
   - "Intervention": Intervention
     image: Intervention
+    color: info
   - "Mediation": Mediation
     image: Mediation
+    color: white
   - "Negotiation": Negotiation
     image: Negotiation
+    color: info
   - "Parenting Order": Parenting Order
     image: Parenting Order
+    color: white
   - "Parenting Plan": Parenting Plan
     image: Parenting Plan
+    color: info
   - "Practitioner": Practitioner
     image: Practitioner
+    color: white
   - "Respondent": Respondent
     image: Respondent
+    color: info
   - "Subpoena": Subpoena
     image: Subpoena    
+    color: white
   - "Spouse": Spouse
     image: Spouse
+    color: info
 ---
 # Here is where the user is taken if they have a question or concern about their safety. 
 event: Safetyconcern_screen
