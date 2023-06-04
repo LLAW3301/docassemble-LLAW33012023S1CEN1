@@ -320,21 +320,21 @@ choices:
 ---
 # Here are more questions for if the user selects they have a financial related question. 
 question: |
-  <i class="fa-sharp fa-solid fa-person-circle-question"></i> Please provide the following information <i class="fa-sharp fa-solid fa-person-circle-question"></i>
+  <i class="fa-solid fa-handshake"></i> Please provide the following information <i class="fa-solid fa-handshake"></i>
 fields:
   - "Do you have a Binding Financial Agreement?": has_bfa
     datatype: yesnoradio
 back button: True
 ---
 question: |
-  <i class="fa-sharp fa-solid fa-person-circle-question"></i> Please provide the following information <i class="fa-sharp fa-solid fa-person-circle-question"></i>
+  <i class="fa-solid fa-newspaper"></i> Please provide the following information <i class="fa-solid fa-newspaper"></i>
 fields:
   - "Are any orders in place?": orders_in_place
     datatype: yesnoradio
 back button: True
 ---
 question: |
-  <i class="fa-sharp fa-solid fa-person-circle-question"></i> Please provide the following information <i class="fa-sharp fa-solid fa-person-circle-question"></i>
+  <i class="fa-solid fa-magnifying-glass-dollar"></i> Please provide the following information <i class="fa-solid fa-magnifying-glass-dollar"></i>
 fields:
   - "Are you wanting some type of financial order drawn up?": want_financial_order
     datatype: yesnoradio
@@ -342,7 +342,7 @@ back button: True
 ---
 # This is the question for if they want to know about a legal term, in which case it will take them to the glossary.
 question: |
-  <i class="fa-sharp fa-solid fa-person-circle-question"></i> Please provide the following information <i class="fa-sharp fa-solid fa-person-circle-question"></i>
+  <i class="fa-solid fa-gavel"></i> Please provide the following information <i class="fa-solid fa-gavel"></i>
 fields:
   - "Do you have a question about a particular legal term?": question_legal_term
     datatype: yesnoradio
@@ -350,7 +350,7 @@ back button: True
 ---
 # This is for if they don't have a question related to the three options but have a question about their legal rights.
 question: |
-  <i class="fa-sharp fa-solid fa-person-circle-question"></i> Please provide the following information <i class="fa-sharp fa-solid fa-person-circle-question"></i>
+  <i class="fa-solid fa-scale-unbalanced-flip"></i> Please provide the following information <i class="fa-solid fa-scale-unbalanced-flip"></i>
 fields:
   - "Do you have a question about your legal rights?": question_legal_rights
     datatype: yesnoradio
@@ -358,7 +358,7 @@ back button: True
 ---
 # This is for if they don't have a question related to the three options but have a question about legal documents. 
 question: |
-  <i class="fa-sharp fa-solid fa-person-circle-question"></i> Please provide the following information <i class="fa-sharp fa-solid fa-person-circle-question"></i>
+  <i class="fa-solid fa-file-contract"></i> Please provide the following information <i class="fa-solid fa-file-contract"></i>
 fields:
   - "Do you have a question about legal documentation?": question_legal_docs
     datatype: yesnoradio
@@ -366,7 +366,7 @@ back button: True
 ---
 # This is for if they don't have a question related to the three options but have a question about safety. 
 question: |
-  <i class="fa-sharp fa-solid fa-person-circle-question"></i> Please provide the following information <i class="fa-sharp fa-solid fa-person-circle-question"></i>
+  <i class="fa-solid fa-user-shield"></i> Please provide the following information <i class="fa-solid fa-user-shield"></i>
 fields:
   - "Do you have a question about your safety?": question_safety
     datatype: yesnoradio
