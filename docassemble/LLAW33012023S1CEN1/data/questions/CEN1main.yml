@@ -1,5 +1,6 @@
 ---
 include:
+  - autoterms.yml
   - CEN1FAQ_Fin.yml
   - CEN1FAQ_fin_flow.yml
   - CEN1FAQ_Flow.yml
@@ -9,7 +10,6 @@ include:
   - FAQanswerscode.yml
   - Glossary.yml
   - Images.yml
-  - autoterms.yml
 ---
 features:
   css: prototype.css
