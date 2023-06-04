@@ -57,6 +57,13 @@ buttons:
   - Exit: exit
     url: https://centacare.org.au/
 ---
+interview help:
+  heading: How to use this app
+  content: |
+    The app will ask you a series of questions to try and work out exactly what it is you need. Answer each question truthfully by selecting the relevant option and clicking the 'continue' button. The app will then present you with a series of questions it thinks may be relevant to you and you can click any of these to have your question answered. 
+    
+    An app is always going to have its limits, so if you need further assistance please contact [Centacare](https://centacare.org.au/contact/).
+---
 # Mandatory block which links users to FAQs.
 mandatory: True
 # This is the main 'if' statement that will direct the entire app
@@ -147,12 +154,14 @@ question: |
 fields:
   - "Are you separated or divorced already?": already_separated
     datatype: yesnoradio
+back button: True
 ---
 question: |
   <i class="fa-solid fa-heart-crack"></i> Please provide the following information <i class="fa-solid fa-heart-crack"></i>
 fields:
   - "Are you currently separating or divorcing?": currently_separating
     datatype: yesnoradio
+back button: True
 ---
   # This is the main slection screen where the user can choose what their matter is related to. 
 question: <i class="fa-solid fa-people-roof"></i> **Co-Parent Connect** <i class="fa-solid fa-people-roof"></i>
@@ -165,6 +174,7 @@ choices:
   - Other
 Right: |
   [FILE Divorce.png, 300px]
+back button: True
 ---
 # From here down are the codes for the questions that will be asked depending on what option the user selects. 
 question: <i class="fa-solid fa-people-roof"></i> **Co-Parent Connect** <i class="fa-solid fa-people-roof"></i>
@@ -176,6 +186,7 @@ fields:
      choices:
         - Yes
         - No
+back button: True
 ---
 question: <i class="fa-solid fa-people-roof"></i> **Co-Parent Connect** <i class="fa-solid fa-people-roof"></i>
 subquestion: |
@@ -186,6 +197,7 @@ fields:
      choices:
         - Yes
         - No
+back button: True
 ---
 question: <i class="fa-solid fa-people-roof"></i> **Co-Parent Connect** <i class="fa-solid fa-people-roof"></i>
 subquestion: |
@@ -196,6 +208,7 @@ fields:
      choices:
         - Yes
         - No
+back button: True
 ---
 question: <i class="fa-solid fa-people-roof"></i> **Co-Parent Connect** <i class="fa-solid fa-people-roof"></i>
 subquestion: |
@@ -206,6 +219,7 @@ fields:
      choices:
         - Yes
         - No
+back button: True
 ---
 question: |
   What else do you need help with?
@@ -213,6 +227,7 @@ field: other_option
 choices:
   - I want to know about a legal term: legal term
   - I would like to contact Centacare: contact
+back button: True
 ---
 # We need one FAQ multiple choice field for every branch of your flowchart
 # So that's 8 in total. However, two go to screens that are already created such as the glossary and contact centacare.
@@ -234,6 +249,7 @@ choices:
   - What do I do if the other parent isn’t making the child-support payments ordered by the court?
   - What is the difference between a parenting order and a parenting plan?
   - I don’t understand my parenting order, who can I speak to about this?
+back button: True
 ---
 # We need one FAQ multiple choice field for every branch of your flowchart
 # So that's 8 in total - so this is number 2
@@ -251,6 +267,7 @@ choices:
   - What do I do if the other parent isn’t making the child-support payments ordered by the court?
   - What is the difference between a parenting order and a parenting plan?
   - I don’t understand my parenting order, who can I speak to about this?
+back button: True
 ---
 # We need one FAQ multiple choice field for every branch of your flowchart
 # So that's 8 in total - so this is number 3
@@ -266,6 +283,7 @@ choices:
   - What is the difference between a parenting order and a parenting plan?
   - Where do I go to have a parenting order or custody order drawn up?
   - What is the most cost-effective method for obtaining a legally drafted document?
+back button: True
 ---
 # We need one FAQ multiple choice field for every branch of your flowchart
 # So that's 8 in total - so this is number 4
@@ -277,6 +295,7 @@ choices:
   - Can our child(ren) have a say in where they stay?
   - What is the difference between a parenting order and a parenting plan?
   - Where do I go to have a parenting order or custody order drawn up?
+back button: True
 ---
 # We need one FAQ multiple choice field for every branch of your flowchart
 # So that's 8 in total - so this is number 5
@@ -286,6 +305,7 @@ question: |
 field: FAQ_child_NNY
 choices:
   - Where can I find my rights as a parent sharing custody?
+back button: True
 ---
 # We need one FAQ multiple choice field for every branch of your flowchart
 # So that's 8 in total - so this is number 6
@@ -304,18 +324,21 @@ question: |
 fields:
   - "Do you have a Binding Financial Agreement?": has_bfa
     datatype: yesnoradio
+back button: True
 ---
 question: |
   <i class="fa-sharp fa-solid fa-person-circle-question"></i> Please provide the following information <i class="fa-sharp fa-solid fa-person-circle-question"></i>
 fields:
   - "Are any orders in place?": orders_in_place
     datatype: yesnoradio
+back button: True
 ---
 question: |
   <i class="fa-sharp fa-solid fa-person-circle-question"></i> Please provide the following information <i class="fa-sharp fa-solid fa-person-circle-question"></i>
 fields:
   - "Are you wanting some type of financial order drawn up?": want_financial_order
     datatype: yesnoradio
+back button: True
 ---
 # This is the question for if they want to know about a legal term, in which case it will take them to the glossary.
 question: |
@@ -323,6 +346,7 @@ question: |
 fields:
   - "Do you have a question about a particular legal term?": question_legal_term
     datatype: yesnoradio
+back button: True
 ---
 # This is for if they don't have a question related to the three options but have a question about their legal rights.
 question: |
@@ -330,6 +354,7 @@ question: |
 fields:
   - "Do you have a question about your legal rights?": question_legal_rights
     datatype: yesnoradio
+back button: True
 ---
 # This is for if they don't have a question related to the three options but have a question about legal documents. 
 question: |
@@ -337,6 +362,7 @@ question: |
 fields:
   - "Do you have a question about legal documentation?": question_legal_docs
     datatype: yesnoradio
+back button: True
 ---
 # This is for if they don't have a question related to the three options but have a question about safety. 
 question: |
@@ -344,6 +370,7 @@ question: |
 fields:
   - "Do you have a question about your safety?": question_safety
     datatype: yesnoradio
+back button: True
 ---
 # Here is the code for the glossary. Each line has 'image' inserted in to make the app more visual and easy to understand. This creates simple buttons for the user to take them to each defintition.
 css class: GlossaryButtonHeader
@@ -502,6 +529,7 @@ buttons:
   - Restart: restart
   - Exit: exit
     url: https://centacare.org.au/
+back button: True
 ---
 # This is the contact Centacare screen
 event: contact_screen
@@ -525,6 +553,7 @@ buttons:
   - Restart: restart
   - Exit: exit
     url: https://centacare.org.au/
+back button: True
 ---
 # This is the contact Centacare CHILD screen
 event: child_end_contact_screen
@@ -548,6 +577,7 @@ buttons:
   - Restart: restart
   - Exit: exit
     url: https://centacare.org.au/
+back button: True
 ---
 event: display_faq_screen
 question: <i class="fa-solid fa-people-roof"></i> **Co-Parent Connect** <i class="fa-solid fa-people-roof"></i>
@@ -560,6 +590,7 @@ buttons:
   - Exit: exit
     url: https://centacare.org.au/
   - Restart: restart
+back button: True
 ---
 # Establishes that the Flinders accreditation is displayed on every single page of Co-Parent Connect, and that the application was created in colaboration with Centacare.
 default screen parts:
