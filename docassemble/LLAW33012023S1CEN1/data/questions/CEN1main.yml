@@ -235,7 +235,7 @@ back button: True
 # They need to display the questions for each branch of the flowchart
 # Set the field to an equivalent of FAQ_child_XXX (where XXX is the branch of your flowchart)
 question: | 
-  <i class="fa-sharp fa-solid fa-children"></i> What do you have questions about? <i class="fa-sharp fa-solid fa-children"></i>
+  <i class="fa-solid fa-children"></i> What do you have questions about? <i class="fa-solid fa-children"></i>
 field: FAQ_child_YYY
 choices:
   - Can I change our parenting plan if I need the kids for an important event/occasion?
@@ -255,7 +255,7 @@ back button: True
 # So that's 8 in total - so this is number 2
 # They need to display the questions for each branch of the flowchart
 question: | 
-  <i class="fa-sharp fa-solid fa-children"></i> What do you have questions about? <i class="fa-sharp fa-solid fa-children"></i>
+  <i class="fa-solid fa-children"></i> What do you have questions about? <i class="fa-solid fa-children"></i>
 field: FAQ_child_YYN
 choices:
   - Can I change our parenting plan if I need the kids for an important event/occasion?
@@ -273,7 +273,7 @@ back button: True
 # So that's 8 in total - so this is number 3
 # They need to display the questions for each branch of the flowchart
 question: | 
-  <i class="fa-sharp fa-solid fa-children"></i> What do you have questions about? <i class="fa-sharp fa-solid fa-children"></i>
+  <i class="fa-solid fa-children"></i> What do you have questions about? <i class="fa-solid fa-children"></i>
 field: FAQ_child_NYY
 choices:
   - Where can I find my rights as a parent sharing custody?
@@ -289,7 +289,7 @@ back button: True
 # So that's 8 in total - so this is number 4
 # They need to display the questions for each branch of the flowchart
 question: | 
-  <i class="fa-sharp fa-solid fa-children"></i> What do you have questions about? <i class="fa-sharp fa-solid fa-children"></i>
+  <i class="fa-solid fa-children"></i> What do you have questions about? <i class="fa-solid fa-children"></i>
 field: FAQ_child_NYN
 choices:
   - Can our child(ren) have a say in where they stay?
@@ -301,7 +301,7 @@ back button: True
 # So that's 8 in total - so this is number 5
 # They need to display the questions for each branch of the flowchart
 question: | 
-  <i class="fa-sharp fa-solid fa-children"></i> What do you have questions about? <i class="fa-sharp fa-solid fa-children"></i>
+  <i class="fa-solid fa-children"></i> What do you have questions about? <i class="fa-solid fa-children"></i>
 field: FAQ_child_NNY
 choices:
   - Where can I find my rights as a parent sharing custody?
@@ -311,7 +311,7 @@ back button: True
 # So that's 8 in total - so this is number 6
 # They need to display the questions for each branch of the flowchart
 question: | 
-  <i class="fa-sharp fa-solid fa-children"></i> What do you have questions about? <i class="fa-sharp fa-solid fa-children"></i>
+  <i class="fa-solid fa-children"></i> What do you have questions about? <i class="fa-solid fa-children"></i>
 field: FAQ_child_YNY
 choices:
   - Where can I find my rights as a parent sharing custody?
