@@ -12,6 +12,7 @@ field: display_order_faq
 choices:
   - Where can I find a copy of my order?
   - What type of order do I have?
+back button: True
 ---
 question: | 
   <i class="fa-solid fa-magnifying-glass-dollar"></i> What do you have questions about? <i class="fa-solid fa-magnifying-glass-dollar"></i>
@@ -19,4 +20,5 @@ field: display_financial_order_faq
 choices:
   - Where can I go to have a binding financial agreement drawn up?
   - What are the different types of financial orders?
+back button: True
 ---

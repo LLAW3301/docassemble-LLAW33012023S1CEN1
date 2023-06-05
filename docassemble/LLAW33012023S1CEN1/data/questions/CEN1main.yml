@@ -179,7 +179,7 @@ back button: True
 # From here down are the codes for the questions that will be asked depending on what option the user selects. 
 question: <i class="fa-solid fa-people-roof"></i> **Co-Parent Connect** <i class="fa-solid fa-people-roof"></i>
 subquestion: |
-  Is there an agreement in place?
+  Is there a parenting agreement in place?
 fields:
    - no label: have_agreements
      datatype: radio
@@ -329,7 +329,7 @@ back button: True
 question: |
   <i class="fa-solid fa-newspaper"></i> Please provide the following information <i class="fa-solid fa-newspaper"></i>
 fields:
-  - "Are any orders in place?": orders_in_place
+  - "Is there currently an order in place?": orders_in_place
     datatype: yesnoradio
 back button: True
 ---
